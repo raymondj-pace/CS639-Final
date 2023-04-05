@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128231313274",
+    "project_id": "financial-planner-bd908",
+    "storage_bucket": "financial-planner-bd908.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128231313274:android:fda4bfd802dc83d6fd10c3",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128231313274-3a37nv52nskjctedmfv1l1ejm2lro5rk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Uz_vn0ojINDGwrEtLX7ycMkNsLuJGIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128231313274-3a37nv52nskjctedmfv1l1ejm2lro5rk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
