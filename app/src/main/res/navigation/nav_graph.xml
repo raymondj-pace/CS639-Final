@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Main">
+
+    <fragment
+        android:id="@+id/Main"
+        android:name="com.example.myapplication.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_Main_to_AddFunds"
+            app:destination="@id/AddFunds" />
+        <action
+            android:id="@+id/action_Main_to_Deduction"
+            app:destination="@id/Deduction" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddFunds"
+        android:name="com.example.myapplication.AddFundsFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_add_funds">
+        <action
+            android:id="@+id/action_AddFunds_to_Main"
+            app:destination="@id/Main" />
+        <argument
+            android:name="addition"
+            app:argType="MoneyTransaction" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Deduction"
+        android:name="com.example.myapplication.DeductionFragment"
+        android:label="Deduction"
+        tools:layout="@layout/fragment_deduction">
+        <action
+            android:id="@+id/action_Deduction_to_Main"
+            app:destination="@id/Main" />
+        <argument
+            android:name="deduction"
+            app:argType="MoneyTransaction" />
+
+    </fragment>
+
+
+</navigation>
