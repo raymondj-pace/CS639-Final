@@ -17,5 +17,7 @@
     <string name="enter_a_description">Enter a description</string>
     <string name="enter_an_amount">Enter an amount</string>
     <string name="_0_00">0.00</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>
