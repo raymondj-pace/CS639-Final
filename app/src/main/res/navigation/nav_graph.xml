@@ -28,7 +28,7 @@
             app:destination="@id/Main" />
         <argument
             android:name="addition"
-            app:argType="MoneyTransaction" />
+            app:argType="com.example.myapplication.MoneyTransaction" />
     </fragment>
 
     <fragment
@@ -41,7 +41,7 @@
             app:destination="@id/Main" />
         <argument
             android:name="deduction"
-            app:argType="MoneyTransaction" />
+            app:argType="com.example.myapplication.MoneyTransaction" />
 
     </fragment>
 
