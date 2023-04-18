@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import static com.example.myapplication.TransactionType.ADD;
 import static com.example.myapplication.TransactionType.SUBTRACT;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -35,8 +34,15 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         this.description = description;
     }
 
-    public int /*TransactionType*/ getTransType() {
+    public int /*TransactionType*/ getTransactionType() {
         return transactionType;
+    }
+
+    public String getTransactionType_String() {
+        if (this.transactionType == Integer.valueOf(0)) {
+            return "-";
+        }
+        return "+";
     }
 
     // public LocalDate getDate() {
@@ -53,10 +59,10 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
 
     /*
     public void setTransactionType(TransactionType t) {
-
         this.transactionType = t;
     }*/
 
+    /*
     public void setTransactionType(String t) {
         if (t.compareTo("-") == 0) {
             this.transactionType = 0;  //SUBTRACT;
@@ -65,13 +71,14 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
             this.transactionType = 1;  //ADD;
         }
     }
+     */
 
     public void setTransactionType(int t) {
         if (t == 0) {
-            this.transactionType = 0;  //SUBTRACT;
+            this.transactionType = 0;  // SUBTRACT;
         }
         else {
-            this.transactionType = 1;  //ADD;
+            this.transactionType = 1;  // ADD;
         }
     }
 
@@ -83,7 +90,6 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         formatter = formatter.withLocale(Locale.US);
         this.date = LocalDate.parse(d, formatter);
-
          */
     }
 
@@ -91,7 +97,9 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         this.description = d;
     }
 
-    public void setAmount(double amt) { this.amount = amt; }
+    public void setAmount(double amt) {
+        this.amount = amt;
+    }
 
 
     @Override
@@ -120,7 +128,7 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         return "-" + "\t" + this.date + "\t$" + String.valueOf(this.amount) + "\t" + this.description;
 
         /*
-        if (this.transType == ADD) {
+        if (this.transactionType == ADD) {
             return "+" + "\t" + displayDateFormat.format(this.date) + "\t$" + String.valueOf(this.amount) + "\t" + this.description;
         }
 

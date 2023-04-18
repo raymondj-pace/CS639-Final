@@ -14,7 +14,6 @@ import android.util.Log;
 import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private static final String TAG = "MyActivity";
@@ -24,11 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Log.d(TAG, "START APPLICATION");
-
-        // binding = ActivityMainBinding.inflate(getLayoutInflater());
-        //setContentView(binding.getRoot());
-        // setContentView(R.layout.fragment_main);
-        // setSupportActionBar(binding.toolbar);
 
         setContentView(R.layout.activity_main);
         NavHostFragment navHostFragment = (NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_content_main);

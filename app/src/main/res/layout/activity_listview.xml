@@ -2,16 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="fill_parent"
+        android:id="@+id/textViewLV1"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:textColor="@color/black" />
+        android:layout_weight="0.14"
+        android:layout_width="10px"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/textViewLV2"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_width="10px"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewLV3"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:layout_width="10px"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:gravity="right" />
+
+    <TextView
+        android:id="@+id/textViewLV4"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:layout_width="10px"
+        android:padding="6dp"
+        android:textColor="@color/black"
+        android:gravity="left"/>
 
 </LinearLayout>
