@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.database.DatabaseReference;
+
+import java.time.LocalDate;
+import java.util.Date;
 
 public class AddFundsFragment extends Fragment {
 
@@ -45,29 +49,35 @@ public class AddFundsFragment extends Fragment {
         //binding = null;
     }
 
-    /*public void addingFunds(View view) {
+    public void addingFunds(View view) {
         // Get the search string from the input field.
-        double amount =
-        String lastName = mLastName.getText().toString();
+        double aAmount = Double.parseDouble(amount.getText().toString());
+        String aDescription = description.getText().toString();
+        Date tempDate = new Date(date.getDate());
+        String aDate = tempDate.toString();
 
-        if (firstName.isEmpty() || lastName.isEmpty()) {
+        if (aAmount == 0 || aDescription.isEmpty() || aDate.isEmpty()) {
 
-            if (firstName.isEmpty()) {
-                mFirstName.setHint("Enter first name");
+            if (aAmount == 0) {
+                amount.setHint("Please enter Amount");
             }
 
-            if (lastName.isEmpty()) {
-                mLastName.setHint("Enter last name");
+            if (aDescription.isEmpty()) {
+                description.setHint("Please enter Description");
             }
 
-            Toast toast = Toast.makeText(this, "Enter first and last names", Toast.LENGTH_SHORT);
-            toast.show();
+            //TODO: Look for date how to set it's hint.
+            /* (aDate.isEmpty()) {
+                date.setHint("Please select Date");
+            }*/
 
+            Activity activity = getActivity();
+            Toast.makeText(activity,"Enter Amount, Description, and Date", Toast.LENGTH_LONG).show();
             return;
         }
 
         // Clear the previous inputs
-        mFirstName.setText("");
+        /* mFirstName.setText("");
         mLastName.setText("");
 
         // Reset Hint values
@@ -86,6 +96,6 @@ public class AddFundsFragment extends Fragment {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        }
-    }*/
+        }*/
+    }
 }
