@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ public class AddFundsFragment extends Fragment {
     private EditText amount;
     private EditText description;
     private CalendarView date;
-
+    private static final String TAG = "MyActivity";
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -41,6 +42,13 @@ public class AddFundsFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.AddFunds_BtnOK).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addingFunds(view);
+            }
+        });
     }
 
     @Override
@@ -50,16 +58,17 @@ public class AddFundsFragment extends Fragment {
     }
 
     public void addingFunds(View view) {
+        Log.d(TAG,"Error in Ok button call for Add funds");
         // Get the search string from the input field.
-        double aAmount = Double.parseDouble(amount.getText().toString());
+        String aAmount = amount.getText().toString();
         String aDescription = description.getText().toString();
         Date tempDate = new Date(date.getDate());
         String aDate = tempDate.toString();
 
-        if (aAmount == 0 || aDescription.isEmpty() || aDate.isEmpty()) {
+        if ( aAmount.isEmpty() || aDescription.isEmpty() || aDate.isEmpty()) {
 
-            if (aAmount == 0) {
-                amount.setHint("Please enter Amount");
+             if (aAmount.isEmpty()) {
+               amount.setHint("Please enter Amount");
             }
 
             if (aDescription.isEmpty()) {

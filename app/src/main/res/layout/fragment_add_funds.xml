@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFundsFragment">
+    tools:context="com.example.myapplication.AddFundsFragment">
 
     <TextView
         android:id="@+id/textView4"
@@ -113,7 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/AddFunds_BtnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
@@ -121,7 +121,8 @@
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarView1"
+        />
 
     <Button
         android:id="@+id/button5"
