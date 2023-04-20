@@ -118,6 +118,9 @@ public class AddFundsFragment extends Fragment {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
 
+                // Month is zero based
+                month += 1;
+
                 // Put a leading 0 on day and month when needed
 
                 if (month < 10) {
