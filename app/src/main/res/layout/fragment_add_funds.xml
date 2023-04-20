@@ -75,6 +75,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#000000"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal1"
         tools:ignore="LabelFor" />
