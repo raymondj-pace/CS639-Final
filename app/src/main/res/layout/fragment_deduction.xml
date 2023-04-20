@@ -66,7 +66,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="40dp"
-        android:autofillHints="description"
+        android:autofillHints="Description"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
