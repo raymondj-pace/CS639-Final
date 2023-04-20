@@ -56,6 +56,14 @@ public class AddFundsFragment extends Fragment {
                 addingFunds(view);
             }
         });
+
+        view.findViewById(R.id.AddFunds_BtnCancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(AddFundsFragment.this)
+                        .navigate(R.id.action_AddFunds_to_Main);
+            }
+        });
     }
 
     @Override
