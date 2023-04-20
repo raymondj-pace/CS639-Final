@@ -105,7 +105,7 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
     @Override
     public int compareTo(MoneyTransaction trans) {
 
-        // Sort the objects by their dates in format: YYYY MM DD
+        // Sort the objects by their dates in format: YYYY MM DD in Descending order
 
         String str1 = this.date;
         String str2 = trans.date;
@@ -114,7 +114,8 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         String str2 = sortDateFormat.format(trans.date);
 *       */
 
-        return str1.compareTo(str2);
+        // Swap value so that it's in descending order
+        return -str1.compareTo(str2);
     }
 
     @Override
