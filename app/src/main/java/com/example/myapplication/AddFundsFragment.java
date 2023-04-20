@@ -8,7 +8,6 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CalendarView;
 import android.widget.EditText;
@@ -23,8 +22,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.Year;
+import java.util.Calendar;
 import java.util.Date;
 
 public class AddFundsFragment extends Fragment {
@@ -34,7 +37,7 @@ public class AddFundsFragment extends Fragment {
     private EditText description;
     private CalendarView calendarView;
 
-    // Calendar fields
+    // Calendar field values
     private String currentYear;
     private String currentMonth;
     private String currentDay;
@@ -56,6 +59,86 @@ public class AddFundsFragment extends Fragment {
         amount = fragmentAddFundsLayout.findViewById(R.id.editTextNumberDecimal1);
         description = fragmentAddFundsLayout.findViewById(R.id.editTextDescription1);
         calendarView = fragmentAddFundsLayout.findViewById(R.id.calendarView1);
+
+
+        /*
+         * Set default date in case nothing is selected from CalendarView
+         */
+        Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(today); // don't forget this if date is arbitrary e.g. 01-01-2014
+
+        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+        int month = cal.get(Calendar.MONTH) + 1;
+        int year = cal.get(Calendar.YEAR);
+
+        if (month < 10) {
+            currentMonth = "0" + String.valueOf(month);
+        }
+        else {
+            currentMonth = String.valueOf(month);
+        }
+
+        if (dayOfMonth < 10) {
+            currentDay = "0" + String.valueOf(dayOfMonth);
+        }
+        else {
+            currentDay = String.valueOf(dayOfMonth);
+        }
+
+        currentYear = String.valueOf(year);
+
+
+        /*
+         * Setup listener on description field so keyboard can be hidden when <Enter> key is pressed
+         */
+        description.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+                if (actionId == 0) {  // Shouldn't be zero but it's the only thing that works
+                    Log.d(TAG, "HIT ENTER on Description");
+
+                    // Save text and then hide keyboard
+                    descriptionStr = description.getText().toString();
+                    InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
+        /*
+         * Listen for calender selection changes
+         */
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+
+                // Put a leading 0 on day and month when needed
+
+                if (month < 10) {
+                    currentMonth = "0" + String.valueOf(month);
+                }
+                else {
+                    currentMonth = String.valueOf(month);
+                }
+
+                if (dayOfMonth < 10) {
+                    currentDay = "0" + String.valueOf(dayOfMonth);
+                }
+                else {
+                    currentDay = String.valueOf(dayOfMonth);
+                }
+
+                currentYear = String.valueOf(year);
+
+                Log.d(TAG,currentYear + "-" + currentMonth + "-" + currentDay);
+            }
+        });
 
         return fragmentAddFundsLayout;
     }
@@ -85,58 +168,6 @@ public class AddFundsFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(AddFundsFragment.this)
                         .navigate(R.id.action_AddFunds_to_Main);
-            }
-        });
-
-
-        /*
-         * Setup listener on description so keyboard can be hidden when <Enter> key is pressed
-         */
-        description.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
-                if (actionId == 0) {  // Shouldn't be zero but it's the only thing that works
-                    Log.d(TAG, "HIT ENTER on Description");
-
-                    // Save text and then hide keyboard
-                    descriptionStr = description.getText().toString();
-                    InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                    return true;
-                }
-                return false;
-            }
-        });
-
-
-        /*
-         * Keep track of date changes from the user
-         */
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-
-                // Put a leading 0 on day and month when needed
-
-                if (month < 10) {
-                    currentMonth = "0" + String.valueOf(month);
-                }
-                else {
-                    currentMonth = String.valueOf(month);
-                }
-
-                if (dayOfMonth < 10) {
-                    currentDay = "0" + String.valueOf(dayOfMonth);
-                }
-                else {
-                    currentDay = String.valueOf(dayOfMonth);
-                }
-
-                currentYear = String.valueOf(year);
-
-                Log.e(TAG,currentYear + "-" + currentMonth + "-" + currentDay);
             }
         });
     }
@@ -177,6 +208,11 @@ public class AddFundsFragment extends Fragment {
 
             // Format amount to ###.##
             double amount = Double.parseDouble(aAmount);
+            DecimalFormat df = new DecimalFormat("0.00");
+            String formatted = df.format(amount);
+            amount = Double.parseDouble(formatted);
+
+
 
             // Create new transaction
             MoneyTransaction transaction = new MoneyTransaction(1, dateStr, amount, aDescription);

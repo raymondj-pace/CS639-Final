@@ -78,7 +78,7 @@ public class MainFragment extends Fragment {
                 TextView tv = view.findViewById(R.id.textView3);
 
                 String balanceFormatted;
-                DecimalFormat df = new DecimalFormat("#.00");
+                DecimalFormat df = new DecimalFormat("0.00");
                 if (currentBalance < 0.0) {
                     balanceFormatted = "-$" + df.format(Math.abs(currentBalance));
                     tv.setTextColor(Color.parseColor("#FF0000"));  // Red
