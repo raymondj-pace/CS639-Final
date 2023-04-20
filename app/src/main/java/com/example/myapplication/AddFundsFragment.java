@@ -1,22 +1,25 @@
 package com.example.myapplication;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.CalendarView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -24,8 +27,12 @@ public class AddFundsFragment extends Fragment {
 
     private EditText amount;
     private EditText description;
-    private CalendarView date;
-    private static final String TAG = "MyActivity";
+    private CalendarView calendarView;
+
+    private static final String TAG = "AddFundsFragment";
+
+    DatabaseReference myRef;
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -35,7 +42,7 @@ public class AddFundsFragment extends Fragment {
 
         amount = fragmentAddFundsLayout.findViewById(R.id.editTextNumberDecimal1);
         description = fragmentAddFundsLayout.findViewById(R.id.editTextDescription1);
-        date = fragmentAddFundsLayout.findViewById(R.id.calendarView1);
+        calendarView = fragmentAddFundsLayout.findViewById(R.id.calendarView1);
 
         return fragmentAddFundsLayout;
     }
@@ -58,14 +65,15 @@ public class AddFundsFragment extends Fragment {
     }
 
     public void addingFunds(View view) {
-        Log.d(TAG,"Error in Ok button call for Add funds");
+
+        Log.d(TAG, "Starting to add transaction");
+
         // Get the search string from the input field.
         String aAmount = amount.getText().toString();
         String aDescription = description.getText().toString();
-        Date tempDate = new Date(date.getDate());
-        String aDate = tempDate.toString();
 
-        if ( aAmount.isEmpty() || aDescription.isEmpty() || aDate.isEmpty()) {
+
+        if ( aAmount.isEmpty() || aDescription.isEmpty()) {
 
              if (aAmount.isEmpty()) {
                amount.setHint("Please enter Amount");
@@ -75,36 +83,43 @@ public class AddFundsFragment extends Fragment {
                 description.setHint("Please enter Description");
             }
 
-            //TODO: Look for date how to set it's hint.
-            /* (aDate.isEmpty()) {
-                date.setHint("Please select Date");
-            }*/
-
             Activity activity = getActivity();
             Toast.makeText(activity,"Enter Amount, Description, and Date", Toast.LENGTH_LONG).show();
-            return;
+        }
+        else {
+            // Format date
+            Long date_epoch = calendarView.getDate();
+            Date d = new Date(date_epoch);
+            String pattern = "yyyy-MM-dd";
+            DateFormat df = new SimpleDateFormat(pattern);
+            String date_str = df.format(d);
+
+
+            // Format amount to ###.##
+            double amount = Double.parseDouble(aAmount);
+
+            // Create new transaction
+            MoneyTransaction transaction = new MoneyTransaction(1, date_str, amount, aDescription);
+
+            // Get Firebase insert reference
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+            myRef = database.getReference("transactions");
+
+            DatabaseReference newPostRef  = myRef.push();
+
+            newPostRef.setValue(transaction);
+
+            NavHostFragment.findNavController(AddFundsFragment.this)
+                    .navigate(R.id.action_AddFunds_to_Main);
         }
 
-        // Clear the previous inputs
-        /* mFirstName.setText("");
-        mLastName.setText("");
-
-        // Reset Hint values
-        mFirstName.setHint("Enter first name");
-        mLastName.setHint("Enter last name");
-
-        // Get a reference to where new entry will go - this avoids having to guess the offset
-        DatabaseReference newPostRef  = myRef.push();
-        Employee emp = new Employee(lastName, firstName);
-        newPostRef.setValue(emp);
-
-        // Return focus back to first name edit text
-        mFirstName.requestFocus();
-
         // Hide keyboard
+        /*
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm.isActive()) {
             imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        }*/
+        }
+        */
     }
 }
