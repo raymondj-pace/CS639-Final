@@ -215,8 +215,6 @@ public class AddFundsFragment extends Fragment {
             String formatted = df.format(amount);
             amount = Double.parseDouble(formatted);
 
-
-
             // Create new transaction
             MoneyTransaction transaction = new MoneyTransaction(1, dateStr, amount, aDescription);
 
