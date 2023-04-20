@@ -1,14 +1,18 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,9 +29,18 @@ import java.util.Date;
 
 public class AddFundsFragment extends Fragment {
 
+    // Fragment fields
     private EditText amount;
     private EditText description;
     private CalendarView calendarView;
+
+    // Calendar fields
+    private String currentYear;
+    private String currentMonth;
+    private String currentDay;
+
+    // Current String within the description field
+    private String descriptionStr;
 
     private static final String TAG = "AddFundsFragment";
 
@@ -50,18 +63,80 @@ public class AddFundsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        /*
+         * Validate user fields and submit to Firebase if all data is present and return to parent fragment
+         */
         view.findViewById(R.id.AddFunds_BtnOK).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addingFunds(view);
+                if (addingFunds(view)) {
+                    NavHostFragment.findNavController(AddFundsFragment.this)
+                            .navigate(R.id.action_AddFunds_to_Main);
+                }
             }
         });
 
+
+        /*
+         * Return to parent fragment when Cancel is pressed
+         */
         view.findViewById(R.id.AddFunds_BtnCancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(AddFundsFragment.this)
                         .navigate(R.id.action_AddFunds_to_Main);
+            }
+        });
+
+
+        /*
+         * Setup listener on description so keyboard can be hidden when <Enter> key is pressed
+         */
+        description.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+                if (actionId == 0) {  // Shouldn't be zero but it's the only thing that works
+                    Log.d(TAG, "HIT ENTER on Description");
+
+                    // Save text and then hide keyboard
+                    descriptionStr = description.getText().toString();
+                    InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
+        /*
+         * Keep track of date changes from the user
+         */
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+
+                // Put a leading 0 on day and month when needed
+
+                if (month < 10) {
+                    currentMonth = "0" + String.valueOf(month);
+                }
+                else {
+                    currentMonth = String.valueOf(month);
+                }
+
+                if (dayOfMonth < 10) {
+                    currentDay = "0" + String.valueOf(dayOfMonth);
+                }
+                else {
+                    currentDay = String.valueOf(dayOfMonth);
+                }
+
+                currentYear = String.valueOf(year);
+
+                Log.e(TAG,currentYear + "-" + currentMonth + "-" + currentDay);
             }
         });
     }
@@ -72,7 +147,7 @@ public class AddFundsFragment extends Fragment {
         //binding = null;
     }
 
-    public void addingFunds(View view) {
+    public boolean addingFunds(View view) {
 
         Log.d(TAG, "Starting to add transaction");
 
@@ -93,21 +168,18 @@ public class AddFundsFragment extends Fragment {
 
             Activity activity = getActivity();
             Toast.makeText(activity,"Enter Amount, Description, and Date", Toast.LENGTH_LONG).show();
+
+            return false;
         }
         else {
-            // Format date
-            Long date_epoch = calendarView.getDate();
-            Date d = new Date(date_epoch);
-            String pattern = "yyyy-MM-dd";
-            DateFormat df = new SimpleDateFormat(pattern);
-            String date_str = df.format(d);
 
+            String dateStr = this.currentYear + "-" + this.currentMonth + "-" + this.currentDay;
 
             // Format amount to ###.##
             double amount = Double.parseDouble(aAmount);
 
             // Create new transaction
-            MoneyTransaction transaction = new MoneyTransaction(1, date_str, amount, aDescription);
+            MoneyTransaction transaction = new MoneyTransaction(1, dateStr, amount, aDescription);
 
             // Get Firebase insert reference
             FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -118,16 +190,7 @@ public class AddFundsFragment extends Fragment {
 
             newPostRef.setValue(transaction);
 
-            NavHostFragment.findNavController(AddFundsFragment.this)
-                    .navigate(R.id.action_AddFunds_to_Main);
+            return true;
         }
-
-        // Hide keyboard
-        /*
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm.isActive()) {
-            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        }
-        */
     }
 }
