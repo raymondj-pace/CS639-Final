@@ -65,7 +65,7 @@ public class ListViewAdapter extends BaseAdapter {
         textViewLV2.setText(currentItem.getDate());
 
         double amount = currentItem.getAmount();
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         String a = "$" + df.format(Math.abs(amount));
         textViewLV3.setText(a);
 
