@@ -5,55 +5,43 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import androidx.navigation.Navigation;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class ListViewAdapter extends BaseAdapter {
-
-    private Context con;
-    public ArrayList<MoneyTransaction> transactionList;
+public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
-        super();
-        this.transactionList = transactionList;
-        this.con = context;
+        super(context, 0, transactionList);
     }
 
     @Override
-    public int getCount() {
-        return transactionList.size();
+    public boolean areAllItemsEnabled() {
+        return true;
     }
 
     @Override
-    public Object getItem(int position) {
-        return transactionList.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
+    public boolean isEnabled(int position) {
+        return true;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = null;
 
         if (convertView == null) {
-            row = ((LayoutInflater) this.con.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.activity_listview, null);
-        }
-        else {
-            row = convertView;
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_listview, parent, false);
         }
 
-        MoneyTransaction currentItem = (MoneyTransaction) getItem(position);
+        MoneyTransaction currentItem = getItem(position);
 
-        TextView textViewLV1 = (TextView) row.findViewById(R.id.textViewLV1);
-        TextView textViewLV2 = (TextView) row.findViewById(R.id.textViewLV2);
-        TextView textViewLV3 = (TextView) row.findViewById(R.id.textViewLV3);
-        TextView textViewLV4 = (TextView) row.findViewById(R.id.textViewLV4);
+        TextView textViewLV1 = convertView.findViewById(R.id.textViewLV1);
+        TextView textViewLV2 = convertView.findViewById(R.id.textViewLV2);
+        TextView textViewLV3 = convertView.findViewById(R.id.textViewLV3);
+        TextView textViewLV4 = convertView.findViewById(R.id.textViewLV4);
 
         if (currentItem.getTransactionType() == 0) {
             textViewLV1.setText("-");
@@ -71,6 +59,59 @@ public class ListViewAdapter extends BaseAdapter {
 
         textViewLV4.setText(currentItem.getDescription());
 
-        return row;
+        textViewLV1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("LV1", "CLICKED");
+                if (currentItem.getTransactionType() == 1) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                }
+                else if (currentItem.getTransactionType() == 0) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                }
+            }
+        });
+
+        textViewLV2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("LV2", "CLICKED");
+                if (currentItem.getTransactionType() == 1) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                }
+                else if (currentItem.getTransactionType() == 0) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                }
+            }
+        });
+
+        textViewLV3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("LV3", "CLICKED");
+                if (currentItem.getTransactionType() == 1) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                }
+                else if (currentItem.getTransactionType() == 0) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                }
+            }
+        });
+
+        textViewLV4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("LV4", "CLICKED");
+
+                if (currentItem.getTransactionType() == 1) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                }
+                else if (currentItem.getTransactionType() == 0) {
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                }
+            }
+        });
+
+        return convertView;
     }
 }
