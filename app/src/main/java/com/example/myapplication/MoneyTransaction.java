@@ -62,8 +62,9 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         this.transactionType = t;
     }*/
 
-    /*
-    public void setTransactionType(String t) {
+
+
+    public void setTransactionType_String(String t) {
         if (t.compareTo("-") == 0) {
             this.transactionType = 0;  //SUBTRACT;
         }
@@ -71,7 +72,8 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
             this.transactionType = 1;  //ADD;
         }
     }
-     */
+
+
 
     public void setTransactionType(int t) {
         if (t == 0) {
@@ -81,6 +83,7 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
             this.transactionType = 1;  // ADD;
         }
     }
+
 
     // public void setDate(LocalDate d) { this.date = d; }
 
