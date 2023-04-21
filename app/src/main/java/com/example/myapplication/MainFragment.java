@@ -95,6 +95,7 @@ public class MainFragment extends Fragment {
                 double currentBalance = 0.00;
                 for (DataSnapshot postSnapshot1 : dataSnapshot.getChildren()) {
                     MoneyTransaction t = postSnapshot1.getValue(MoneyTransaction.class);
+                    t.setKey(postSnapshot1.getKey());
                     transactions.add(t);
                     //assert t != null;
                     if (t.getTransactionType() == 0) {
