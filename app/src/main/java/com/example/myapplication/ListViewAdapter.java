@@ -119,4 +119,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         return convertView;
     }
+
+    private ArrayList<MoneyTransaction> transactionList;
 }
