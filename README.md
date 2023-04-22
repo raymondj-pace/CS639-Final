@@ -2,7 +2,14 @@
 
 ## The topic this semester is: Pace Undergraduate Students’ Financial Literacy
 
-The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget.
+### Proposal:
+The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
+```
+3. List Your Expenses and Track Your Spending
+Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses by looking at past bank statements and credit card statements. Anticipate the costs of tuition, textbooks, school supplies, transportation, and other costs.
+
+Over the next month, record all of your purchases and add these to your budget, adjusting your original estimates as necessary. It can be helpful to organize your expenses into different categories, such as education, food, housing, and entertainment. Separating expenses into needs and wants can help you figure out where you can cut back.
+```
 
 
 <br>
@@ -17,7 +24,7 @@ The goal of this project is to create an application that keeps track of money d
 <br>
 <br>
 
-## Interesting things learned include:
+## Interesting things learned so far:
 How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview.<br>
 <br>
@@ -29,11 +36,11 @@ Allow the fragments to serialze Java objects between them to make the saving of 
 
 <br>
 
-## Intial application rough draft:
+## Application intial application rough draft:
 ![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
 
 <br>
 
-## Prototype done with Figma:
+## Appllication prototype done with Figma:
 ![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
 
