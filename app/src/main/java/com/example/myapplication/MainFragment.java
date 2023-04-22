@@ -23,6 +23,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import com.hudomju.swipe.SwipeToDismissTouchListener;
+import com.hudomju.swipe.adapter.ListViewAdapter;
+
 public class MainFragment extends Fragment {
 
     private static final String TAG = "MainFragment";

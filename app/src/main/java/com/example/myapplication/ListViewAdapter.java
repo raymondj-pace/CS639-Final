@@ -22,6 +22,11 @@ public class ListViewAdapter extends BaseAdapter {
         this.con = context;
     }
 
+    public void remove(int position) {
+        transactionList.remove(position);
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return transactionList.size();
