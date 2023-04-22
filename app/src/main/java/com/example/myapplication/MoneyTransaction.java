@@ -2,6 +2,11 @@ package com.example.myapplication;
 
 import static com.example.myapplication.TransactionType.ADD;
 import static com.example.myapplication.TransactionType.SUBTRACT;
+
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -9,15 +14,19 @@ import java.util.Locale;
 
 public class MoneyTransaction implements Comparable<MoneyTransaction> {
 
+    private String key;
     private int transactionType;
     private String description;
     //private LocalDate date;
     private String date;
     private double amount;
 
+    @SuppressWarnings("unused")
     private final DateTimeFormatter displayDateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    @SuppressWarnings("unused")
     private final DateTimeFormatter sortDateFormat = DateTimeFormatter.ofPattern("yyyyMMdd");
 
+    @SuppressWarnings("unused")
     public MoneyTransaction() {
         /*
         this.transType = ADD;
@@ -27,25 +36,34 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
          */
     }
 
+    @SuppressWarnings("unused")
     MoneyTransaction(/*TransactionType*/ int trans_type, /*LocalDate*/ String date, Double amount, String description) {
         this.transactionType = trans_type;
         this.date = date;
         this.amount = amount;
         this.description = description;
+        this.key = "";
     }
 
+    @SuppressWarnings("unused")
+    public String getKey() { return this.key; }
+    @SuppressWarnings("unused")
+    public void setKey(String k) { this.key = k; }
+
+    @SuppressWarnings("unused")
     public int /*TransactionType*/ getTransactionType() {
         return transactionType;
     }
-
+    @SuppressWarnings("unused")
     public String getTransactionType_String() {
-        if (this.transactionType == Integer.valueOf(0)) {
+        if (this.transactionType == 0) {
             return "-";
         }
         return "+";
     }
 
     // public LocalDate getDate() {
+    @SuppressWarnings("unused")
     public String getDate() {
         // return this.date;
         //return displayDateFormat.format(this.date);
@@ -62,8 +80,8 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         this.transactionType = t;
     }*/
 
-    /*
-    public void setTransactionType(String t) {
+    @SuppressWarnings("unused")
+    public void setTransactionType_String(String t) {
         if (t.compareTo("-") == 0) {
             this.transactionType = 0;  //SUBTRACT;
         }
@@ -71,8 +89,8 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
             this.transactionType = 1;  //ADD;
         }
     }
-     */
 
+    @SuppressWarnings("unused")
     public void setTransactionType(int t) {
         if (t == 0) {
             this.transactionType = 0;  // SUBTRACT;
@@ -83,7 +101,7 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
     }
 
     // public void setDate(LocalDate d) { this.date = d; }
-
+    @SuppressWarnings("unused")
     public void setDate(String d) {
         this.date = d;
         /*
@@ -93,14 +111,15 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
          */
     }
 
+    @SuppressWarnings("unused")
     public void setDescription(String d) {
         this.description = d;
     }
 
+    @SuppressWarnings("unused")
     public void setAmount(double amt) {
         this.amount = amt;
     }
-
 
     @Override
     public int compareTo(MoneyTransaction trans) {
@@ -118,6 +137,7 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
         return -str1.compareTo(str2);
     }
 
+    @NonNull
     @Override
     public String toString() {
 
