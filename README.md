@@ -32,6 +32,13 @@ Over the next month, record all of your purchases and add these to your budget, 
 ### Internal Application Structure
 <p>The application uses multi-fragment with navigation. The main fragment uses a custom listview by creating a BaseAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.</p>
 
+<br>
+<br>
+
+## Application version as of 2023-04-20
+
+![Screen Shot 2023-04-22 at 10 24 33 AM](https://user-images.githubusercontent.com/94663542/233790568-ed3cc4ca-39ee-45f9-b6e8-82080e01c09a.png)
+
 
 <br>
 <br>
