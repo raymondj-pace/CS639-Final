@@ -19,6 +19,11 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         super(context, 0, transactionList);
     }
 
+    public void remove(int position) {
+        transactionList.remove(position);
+        notifyDataSetChanged();
+    }
+
     @Override
     public boolean areAllItemsEnabled() {
         return true;
