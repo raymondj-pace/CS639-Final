@@ -6,7 +6,8 @@
 The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
 ```
 3. List Your Expenses and Track Your Spending
-Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses by looking at past bank statements and credit card statements. Anticipate the costs of tuition, textbooks, school supplies, transportation, and other costs.
+Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses by looking at past bank 
+statements and credit card statements. Anticipate the costs of tuition, textbooks, school supplies, transportation, and other costs.
 
 Over the next month, record all of your purchases and add these to your budget, adjusting your original estimates as necessary. It can be helpful to organize your expenses into different categories, such as education, food, housing, and entertainment. Separating expenses into needs and wants can help you figure out where you can cut back.
 ```
