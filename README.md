@@ -12,6 +12,19 @@ Over the next month, record all of your purchases and add these to your budget, 
 ```
 
 
+
+
+<br>
+
+## Application intial application rough draft:
+![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
+
+<br>
+
+## Appllication prototype done with Figma:
+![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
+
+
 <br>
 <br>
 <br>
@@ -33,14 +46,4 @@ How to modify the format of a listview.<br>
 ## Things still TODO:
 Allow for line items to be deleted or edited from the list view.<br>
 Allow the fragments to serialze Java objects between them to make the saving of data easier.
-
-<br>
-
-## Application intial application rough draft:
-![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
-
-<br>
-
-## Appllication prototype done with Figma:
-![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
 
