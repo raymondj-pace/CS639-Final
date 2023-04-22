@@ -35,7 +35,7 @@ Sources to be used for paper and presentation:
 
 <br>
 
-## Application intial application rough draft:
+## Application intial rough draft:
 ![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
 
 <br>
