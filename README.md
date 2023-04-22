@@ -15,6 +15,21 @@ necessary. It can be helpful to organize your expenses into different categories
 entertainment. Separating expenses into needs and wants can help you figure out where you can cut back.
 ```
 
+Sources to be used for paper and presentation:
+
+[1] https://www.nasfaa.org/news-item/29609/Financial_Literacy_What_College_Students_Need_to_Know
+
+[2] https://blog.ed.gov/2021/04/financial-literacy-education-and-paying-for-college/
+
+[3] https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/
+
+[4] https://college.harvard.edu/guides/financial-literacy
+
+[5] https://www.financialeducatorscouncil.org/why-is-financial-literacy-important-for-college-students/
+
+[6] https://firstgen.naspa.org/scholarly-article/financial-literacy-of-college-students-focus-on-first-generation-students
+
+[7] Costa Mendes, Filipa, "Financial Literacy of College Students Study Case: Students of the University of Porto", Dissertation of Master in Finance, Sept 2013 
 
 
 
