@@ -2,16 +2,13 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -24,6 +21,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         super(context, 0, transactionList);
     }
 
+    @SuppressWarnings("unused")
     public void remove(int position) {
         transactionList.remove(position);
         notifyDataSetChanged();
@@ -75,7 +73,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("item", currentItem);
 
-                Log.d("LV1", "CLICKED");
                 if (currentItem.getTransactionType() == 1) {
                     Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
@@ -91,7 +88,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("item", currentItem);
 
-                Log.d("LV2", "CLICKED");
                 if (currentItem.getTransactionType() == 1) {
                     Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
@@ -104,7 +100,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV3", "CLICKED");
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("item", currentItem);
 
@@ -120,8 +115,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV4", "CLICKED");
-
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("item", currentItem);
 

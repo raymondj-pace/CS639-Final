@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeductionFragment">
+    tools:context="com.example.myapplication.DeductionFragment">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="76dp"
         android:text="@string/deduct_funds"
         android:textColor="#000000"
         android:textSize="38sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,27 +25,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/amount"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        tools:ignore="LabelFor"
         android:id="@+id/editTextNumberDecimal2"
         android:layout_width="143dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:autofillHints="0.00"
         android:ems="10"
         android:hint="@string/_0_00"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/textView9" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView10"
@@ -63,18 +66,17 @@
         android:id="@+id/editTextDescription2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:autofillHints="Description"
         android:ems="10"
+        android:hint="@string/description_text"
         android:inputType="textPersonName"
+        android:imeOptions="actionDone"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:hint="@string/description_text"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
 
@@ -93,8 +95,8 @@
 
     <CalendarView
         android:id="@+id/calendarView2"
-        android:layout_width="237dp"
-        android:layout_height="266dp"
+        android:layout_width="241dp"
+        android:layout_height="302dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +106,7 @@
         android:id="@+id/divider2"
         android:layout_width="409dp"
         android:layout_height="3dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,10 +116,10 @@
         android:id="@+id/DeductFunds_BtnOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:text="@string/ok"
         app:layout_constraintEnd_toStartOf="@+id/DeductFunds_BtnCancel"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView2" />
 
@@ -125,8 +127,8 @@
         android:id="@+id/DeductFunds_BtnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
         android:text="@string/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView2" />
