@@ -16,6 +16,11 @@
         <action
             android:id="@+id/action_Main_to_Deduction"
             app:destination="@id/Deduction" />
+        <argument
+            android:name="item"
+            app:argType="com.example.myapplication.MoneyTransaction"
+            android:defaultValue="@null"
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -27,8 +32,10 @@
             android:id="@+id/action_AddFunds_to_Main"
             app:destination="@id/Main" />
         <argument
-            android:name="addition"
-            app:argType="integer" />
+            android:name="item"
+            app:argType="com.example.myapplication.MoneyTransaction"
+            android:defaultValue="@null"
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -40,8 +47,10 @@
             android:id="@+id/action_Deduction_to_Main"
             app:destination="@id/Main" />
         <argument
-            android:name="deduction"
-            app:argType="integer" />
+            android:name="item"
+            app:argType="com.example.myapplication.MoneyTransaction"
+            android:defaultValue="@null"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

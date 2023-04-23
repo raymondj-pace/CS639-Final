@@ -3,6 +3,8 @@ package com.example.myapplication;
 import static com.example.myapplication.TransactionType.ADD;
 import static com.example.myapplication.TransactionType.SUBTRACT;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -12,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 
-public class MoneyTransaction implements Comparable<MoneyTransaction> {
+public class MoneyTransaction implements Parcelable, Comparable<MoneyTransaction> {
 
     private String key;
     private int transactionType;
@@ -25,6 +27,49 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
     private final DateTimeFormatter displayDateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     @SuppressWarnings("unused")
     private final DateTimeFormatter sortDateFormat = DateTimeFormatter.ofPattern("yyyyMMdd");
+
+    /*
+     * To implement Parceable
+     *
+     */
+    public static final Creator<MoneyTransaction> CREATOR = new Creator<MoneyTransaction>() {
+        @Override
+        public MoneyTransaction createFromParcel(Parcel in) {
+            return new MoneyTransaction(in);
+        }
+
+        @Override
+        public MoneyTransaction[] newArray(int size) {
+            return new MoneyTransaction[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    /*
+     * WARNING WARNING WARNING:
+     * The order of items in writeToParcel MUST MATCH the order
+     * in the Constructor that uses Parcel as the input
+     */
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.key);
+        parcel.writeInt(this.transactionType);
+        parcel.writeString(this.description);
+        parcel.writeString(this.date);
+        parcel.writeDouble(this.amount);
+    }
+
+    public MoneyTransaction(Parcel in) {
+        this.key = in.readString();
+        this.transactionType = in.readInt();
+        this.description = in.readString();
+        this.date = in.readString();
+        this.amount = in.readDouble();
+    }
 
     @SuppressWarnings("unused")
     public MoneyTransaction() {
@@ -65,7 +110,6 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
     // public LocalDate getDate() {
     @SuppressWarnings("unused")
     public String getDate() {
-        // return this.date;
         //return displayDateFormat.format(this.date);
         return this.date;
     }
@@ -73,12 +117,6 @@ public class MoneyTransaction implements Comparable<MoneyTransaction> {
     public double getAmount() { return amount; }
 
     public String getDescription() { return description; }
-
-
-    /*
-    public void setTransactionType(TransactionType t) {
-        this.transactionType = t;
-    }*/
 
     @SuppressWarnings("unused")
     public void setTransactionType_String(String t) {
