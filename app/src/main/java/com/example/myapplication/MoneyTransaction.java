@@ -5,12 +5,11 @@ import static com.example.myapplication.TransactionType.SUBTRACT;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.util.Locale;
 
 
@@ -29,7 +28,7 @@ public class MoneyTransaction implements Parcelable, Comparable<MoneyTransaction
     private final DateTimeFormatter sortDateFormat = DateTimeFormatter.ofPattern("yyyyMMdd");
 
     /*
-     * To implement Parceable
+     * To implement Parcelable
      *
      */
     public static final Creator<MoneyTransaction> CREATOR = new Creator<MoneyTransaction>() {
@@ -72,14 +71,7 @@ public class MoneyTransaction implements Parcelable, Comparable<MoneyTransaction
     }
 
     @SuppressWarnings("unused")
-    public MoneyTransaction() {
-        /*
-        this.transType = ADD;
-        this.date = null;
-        this.amount = 0.00;
-        this.description = "none";
-         */
-    }
+    public MoneyTransaction() {}
 
     @SuppressWarnings("unused")
     MoneyTransaction(/*TransactionType*/ int trans_type, /*LocalDate*/ String date, Double amount, String description) {
@@ -88,6 +80,15 @@ public class MoneyTransaction implements Parcelable, Comparable<MoneyTransaction
         this.amount = amount;
         this.description = description;
         this.key = "";
+    }
+
+    @SuppressWarnings("unused")
+    MoneyTransaction(/*TransactionType*/ String key, int trans_type, /*LocalDate*/ String date, Double amount, String description) {
+        this.key = key;
+        this.transactionType = trans_type;
+        this.date = date;
+        this.amount = amount;
+        this.description = description;
     }
 
     @SuppressWarnings("unused")
@@ -180,11 +181,11 @@ public class MoneyTransaction implements Parcelable, Comparable<MoneyTransaction
     public String toString() {
 
         if (this.transactionType == 1) {
-            return "+" + "\t" + this.date + "\t$" + String.valueOf(this.amount) + "\t" + this.description;
+            return "+" + "\t" + this.date + "\t$" + this.amount + "\t" + this.description;
         }
 
         // else
-        return "-" + "\t" + this.date + "\t$" + String.valueOf(this.amount) + "\t" + this.description;
+        return "-" + "\t" + this.date + "\t$" + this.amount + "\t" + this.description;
 
         /*
         if (this.transactionType == ADD) {

@@ -10,7 +10,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="76dp"
         android:text="@string/add_funds2"
         android:textColor="#000000"
         android:textSize="38sp"
@@ -31,9 +31,9 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
@@ -47,8 +47,7 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="ContentDescription,LabelFor" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView6"
@@ -69,16 +68,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:autofillHints="Description"
         android:ems="10"
         android:hint="@string/description_text"
         android:inputType="textPersonName"
+        android:imeOptions="actionDone"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:imeOptions="actionDone"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal1"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal1" />
 
     <TextView
         android:id="@+id/textView7"
@@ -96,7 +96,7 @@
     <CalendarView
         android:id="@+id/calendarView1"
         android:layout_width="241dp"
-        android:layout_height="266dp"
+        android:layout_height="302dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,10 +106,9 @@
         android:id="@+id/divider1"
         android:layout_width="409dp"
         android:layout_height="3dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
 
@@ -117,20 +116,19 @@
         android:id="@+id/AddFunds_BtnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="40dp"
         android:text="@string/ok"
         app:layout_constraintEnd_toStartOf="@+id/AddFunds_BtnCancel"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
 
     <Button
         android:id="@+id/AddFunds_BtnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
         android:text="@string/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
