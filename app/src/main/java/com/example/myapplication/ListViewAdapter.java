@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
+    private ArrayList<MoneyTransaction> transactionList;
+
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
         super(context, 0, transactionList);
     }
@@ -119,6 +121,4 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         return convertView;
     }
-
-    private ArrayList<MoneyTransaction> transactionList;
 }
