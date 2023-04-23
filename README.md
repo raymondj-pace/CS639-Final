@@ -63,8 +63,9 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 
 ## Application version as of 2023-04-23
+![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
 ![Screen Shot 2023-04-23 at 3 31 45 PM](https://user-images.githubusercontent.com/94663542/233861016-5922d917-4841-4736-9fd2-8ecaa075e570.png)
-![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233861088-eab9f4ab-c08c-44c4-9068-ce499a1d51d1.png)
+![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233866692-ecb9ff3f-6260-4d10-98ff-bf8b2f859428.png)
 
 <br>
 <br>
@@ -76,6 +77,7 @@ How to modify the format of a listview to put in column format.<br>
 How to make a listview clickable (not easy!).<br>
 How to pass custom Java objects between fragments with using host navigation AND implementing the Parcelable interface and creating bundles.<br>
 How to update a Firebase record by using the key value (have to save the key value in the Java object).
+How to create an opening animation screen.
 <br>
 <br>
 
