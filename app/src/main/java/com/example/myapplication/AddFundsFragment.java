@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
@@ -45,6 +46,8 @@ public class AddFundsFragment extends Fragment {
     // Current String within the description field
     private String descriptionStr;
 
+    private String transKey = null;
+
     private static final String TAG = "AddFundsFragment";
 
     DatabaseReference myRef;
@@ -60,33 +63,64 @@ public class AddFundsFragment extends Fragment {
         description = fragmentAddFundsLayout.findViewById(R.id.editTextDescription1);
         calendarView = fragmentAddFundsLayout.findViewById(R.id.calendarView1);
 
+        Bundle bundle = getArguments();
+        MoneyTransaction _trans = bundle.getParcelable("item");
+        if (_trans != null) {
+            Log.d("BUNDLE", "Bundle is not null");
+            Log.d("BUNDLE", bundle.toString());
+            String _key = _trans.getKey();
+            int _trans_type = _trans.getTransactionType();
+            String _desc = _trans.getDescription();
+            String _date = _trans.getDate();
+            double _amount = _trans.getAmount();
 
-        /*
-         * Set default date in case nothing is selected from CalendarView
-         */
-        Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(today); // don't forget this if date is arbitrary e.g. 01-01-2014
+            DecimalFormat df = new DecimalFormat("0.00");
 
-        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
-        int month = cal.get(Calendar.MONTH) + 1;
-        int year = cal.get(Calendar.YEAR);
+            amount.setText(df.format(Math.abs(_amount)));
+            description.setText(_desc);
+            this.transKey = _key;
 
-        if (month < 10) {
-            currentMonth = "0" + String.valueOf(month);
+            try {
+                calendarView.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(_date).getTime(), true, true);
+            } catch (ParseException e) {
+                // Leave as default date
+                //throw new RuntimeException(e);
+            }
         }
         else {
-            currentMonth = String.valueOf(month);
+
+            Log.d("BUNDLE", "Bundle is NULL");
+
+            this.transKey = null;
+
+            /*
+             * Set default date in case nothing is selected from CalendarView
+             */
+            Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(today); // don't forget this if date is arbitrary e.g. 01-01-2014
+
+            int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+            int month = cal.get(Calendar.MONTH) + 1;
+            int year = cal.get(Calendar.YEAR);
+
+            if (month < 10) {
+                currentMonth = "0" + String.valueOf(month);
+            }
+            else {
+                currentMonth = String.valueOf(month);
+            }
+
+            if (dayOfMonth < 10) {
+                currentDay = "0" + String.valueOf(dayOfMonth);
+            }
+            else {
+                currentDay = String.valueOf(dayOfMonth);
+            }
+
+            currentYear = String.valueOf(year);
         }
 
-        if (dayOfMonth < 10) {
-            currentDay = "0" + String.valueOf(dayOfMonth);
-        }
-        else {
-            currentDay = String.valueOf(dayOfMonth);
-        }
-
-        currentYear = String.valueOf(year);
 
 
         /*
@@ -178,7 +212,7 @@ public class AddFundsFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //binding = null;
+        // binding = null;
     }
 
     public boolean addingFunds(View view) {
@@ -206,6 +240,19 @@ public class AddFundsFragment extends Fragment {
             return false;
         }
         else {
+
+            // TODO:
+
+            /*
+
+            if (this.transKey != null) {
+                  // This is an update
+             }
+             else {
+                // Use code below for insert
+             }
+
+             */
 
             String dateStr = this.currentYear + "-" + this.currentMonth + "-" + this.currentDay;
 

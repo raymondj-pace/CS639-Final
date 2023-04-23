@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
+
+    private ArrayList<MoneyTransaction> transactionList;
 
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
         super(context, 0, transactionList);
@@ -67,12 +72,15 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 Log.d("LV1", "CLICKED");
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -80,12 +88,15 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 Log.d("LV2", "CLICKED");
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -94,11 +105,14 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
             @Override
             public void onClick(View v) {
                 Log.d("LV3", "CLICKED");
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -108,17 +122,18 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
             public void onClick(View v) {
                 Log.d("LV4", "CLICKED");
 
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
 
         return convertView;
     }
-
-    private ArrayList<MoneyTransaction> transactionList;
 }
