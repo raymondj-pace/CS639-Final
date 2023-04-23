@@ -66,6 +66,7 @@ Sources to be used for paper and presentation:
 ## Interesting things learned so far:
 How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview.<br>
+How to work in a team using github.<br>
 <br>
 <br>
 
