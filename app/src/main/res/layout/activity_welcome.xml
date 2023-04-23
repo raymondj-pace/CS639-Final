@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingHorizontal="25dp"
+    android:paddingVertical="25dp"
+    tools:context="com.example.myapplication.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="400dp"
+        android:layout_height="275dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="50dp"
+        app:srcCompat="@drawable/dollars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="casual"
+        android:text="Student Financial Planner"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+</RelativeLayout>
