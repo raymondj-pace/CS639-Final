@@ -1,4 +1,7 @@
-# May 2023, CS639 Mobile Application Development, Final Project
+# CS639 Mobile Application Development
+# May 2023, Final Project
+
+<br>
 
 ## The topic this semester is: Pace Undergraduate Students’ Financial Literacy
 
@@ -49,15 +52,19 @@ Sources to be used for paper and presentation:
 <br>
 
 ### Internal Application Structure
-<p>The application uses multi-fragment with navigation. The main fragment uses a custom listview by creating a BaseAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.</p>
+<p>The application uses multi-fragments with navigation. The main fragment uses a custom listview by creating an ArrayAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.
+
+Transactions can be edited by clicking on the row and the child fragment will be prefilled.
+
+The navigation uses safe-args and passes parcelable bundles by implementing the Parcelable interface. This was a difficult task because if your class is not implementing the Parcelable interface there is no error in Logcat to indicate this. A lot of digging was required to get passing Java objects between fragments working.
+</p>
 
 <br>
 <br>
 
-## Application version as of 2023-04-20
-
-![Screen Shot 2023-04-22 at 10 24 33 AM](https://user-images.githubusercontent.com/94663542/233790568-ed3cc4ca-39ee-45f9-b6e8-82080e01c09a.png)
-
+## Application version as of 2023-04-23
+![Screen Shot 2023-04-23 at 3 31 45 PM](https://user-images.githubusercontent.com/94663542/233861016-5922d917-4841-4736-9fd2-8ecaa075e570.png)
+![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233861088-eab9f4ab-c08c-44c4-9068-ce499a1d51d1.png)
 
 <br>
 <br>
@@ -65,11 +72,12 @@ Sources to be used for paper and presentation:
 
 ## Interesting things learned so far:
 How to put a border around a TextView by creating a drawable.<br>
-How to modify the format of a listview.<br>
+How to modify the format of a listview to put in column format.<br>
+How to make a listview clickable (not easy!).<br>
+How to pass custom Java objects between fragments with using host navigation AND implementing the Parcelable interface and creating bundles.<br>
+How to update a Firebase record by using the key value (have to save the key value in the Java object).
 <br>
 <br>
 
 ## Things still TODO:
-Allow for line items to be deleted or edited from the list view.<br>
-Allow the fragments to serialze Java objects between them to make the saving of data easier.
-
+Allow for line items to be deleted from the list view using a horizontal swipe action across rows.<br>
