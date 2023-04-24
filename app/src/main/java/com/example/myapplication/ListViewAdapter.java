@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -19,11 +20,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
         super(context, 0, transactionList);
-    }
-
-    public void remove(int position) {
-        transactionList.remove(position);
-        notifyDataSetChanged();
     }
 
     @Override
@@ -119,6 +115,36 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
             }
         });
 
+        View view = convertView;
+        //TextView textView = view.findViewById(R.id.textView);
+        //textView.setText(items.get(position));
+
+        // Set the tag of the View to the position of the item in the list
+        view.setTag(position);
+
+        // Set the onTouchListener of the View to handle the swipe event
+        view.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // Get the action of the event
+                int action = event.getAction();
+
+                // If the action is a swipe to the left, delete the item at the current position
+                if (action == MotionEvent.ACTION_UP && event.getX() < v.getWidth() / 2) {
+                    remove(position);
+                }
+
+                return false;
+            }
+        });
+
         return convertView;
+    }
+
+    // Remove the item at the specified position from the list
+    public void remove(int position) {
+        transactionList.remove(position);
+        notifyDataSetChanged();
     }
 }

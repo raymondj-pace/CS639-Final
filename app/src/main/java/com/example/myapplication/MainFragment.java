@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -100,8 +101,7 @@ public class MainFragment extends Fragment {
                     //assert t != null;
                     if (t.getTransactionType() == 0) {
                         currentBalance -= t.getAmount();
-                    }
-                    else {
+                    } else {
                         currentBalance += t.getAmount();
                     }
                 }
@@ -113,8 +113,7 @@ public class MainFragment extends Fragment {
                 if (currentBalance < 0.0) {
                     balanceFormatted = "-$" + df.format(Math.abs(currentBalance));
                     tv.setTextColor(Color.parseColor("#FF0000"));  // Red
-                }
-                else {
+                } else {
                     balanceFormatted = "$" + df.format(currentBalance);
                     tv.setTextColor(Color.parseColor("#000000"));  // Black
                 }
@@ -139,6 +138,13 @@ public class MainFragment extends Fragment {
                     }
                 });
                  */
+
+                binding.simpleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        adapter.remove(position);
+                    }
+                });
             }
 
             @Override
