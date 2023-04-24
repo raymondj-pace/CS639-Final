@@ -66,12 +66,12 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         view.findViewById(R.id.button2).setOnClickListener(view1 -> {
-            MainFragmentDirections.ActionMainToAddFunds action = MainFragmentDirections.actionMainToAddFunds(0);
+            MainFragmentDirections.ActionMainToAddFunds action = MainFragmentDirections.actionMainToAddFunds();
             NavHostFragment.findNavController(MainFragment.this).navigate(action);
         });
 
         view.findViewById(R.id.button3).setOnClickListener(view12 -> {
-            MainFragmentDirections.ActionMainToDeduction action = MainFragmentDirections.actionMainToDeduction(0);
+            MainFragmentDirections.ActionMainToDeduction action = MainFragmentDirections.actionMainToDeduction();
             NavHostFragment.findNavController(MainFragment.this).navigate(action);
         });
 
@@ -98,7 +98,6 @@ public class MainFragment extends Fragment {
                     MoneyTransaction t = postSnapshot1.getValue(MoneyTransaction.class);
                     t.setKey(postSnapshot1.getKey());
                     transactions.add(t);
-                    //assert t != null;
                     if (t.getTransactionType() == 0) {
                         currentBalance -= t.getAmount();
                     } else {
@@ -158,6 +157,6 @@ public class MainFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //binding = null;
+        binding = null;
     }
 }

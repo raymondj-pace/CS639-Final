@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -65,12 +65,14 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV1", "CLICKED");
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -78,12 +80,14 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV2", "CLICKED");
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -91,12 +95,14 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV3", "CLICKED");
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
+
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -104,13 +110,14 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("LV4", "CLICKED");
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("item", currentItem);
 
                 if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
                 }
                 else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction);
+                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
             }
         });
@@ -142,9 +149,11 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         return convertView;
     }
 
+
     // Remove the item at the specified position from the list
     public void remove(int position) {
         transactionList.remove(position);
         notifyDataSetChanged();
     }
+
 }
