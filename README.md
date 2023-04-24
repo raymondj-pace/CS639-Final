@@ -61,6 +61,21 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 
 <br>
 <br>
+<br>
+
+# **PROJECT SPRINTS:**
+## Sprint #1: April 22 - April 29
+### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
+### 2. Add opening animation screen to the app.: Ray
+### 3. Investige and add passing custom java objects between fragments to all for updating of records.: Ray
+### 4. Literature and survey review and start inital draft for project paper.: Ray
+
+<br>
+<br>
+<br>
+<br>
+
+
 
 ## Application version as of 2023-04-23
 ![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
