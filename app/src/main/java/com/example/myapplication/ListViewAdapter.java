@@ -2,10 +2,13 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.navigation.Navigation;
@@ -19,6 +22,8 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
         super(context, 0, transactionList);
+
+        this.transactionList = transactionList;
     }
 
     @SuppressWarnings("unused")
@@ -67,6 +72,8 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         textViewLV4.setText(currentItem.getDescription());
 
+
+
         textViewLV1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,9 +119,13 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
             }
         });
 
-        textViewLV4.setOnClickListener(new View.OnClickListener() {
+        textViewLV4.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onLongClick(View v) {
+
+                Log.d("LONG CLICK", "LONG CLICKED");
+                remove(position);
+                /*
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("item", currentItem);
 
@@ -124,9 +135,13 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
                 else if (currentItem.getTransactionType() == 0) {
                     Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
                 }
+                */
+
+                return false;
             }
         });
 
         return convertView;
     }
+
 }
