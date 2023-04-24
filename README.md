@@ -66,9 +66,9 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 # **PROJECT SPRINTS:**
 ## Sprint #1: April 22 - April 29
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
-### 2. Add opening animation screen to the app.: Ray
-### 3. Investige and add passing custom java objects between fragments to all for updating of records.: Ray
-### 4. Literature and survey review and start inital draft for project paper.: Ray
+### 2. Add opening animation screen to the app: Ray
+### 3. Investige and add passing custom java objects between fragments to all for updating of records: Ray
+### 4. Literature and survey review and start inital draft for project paper: Ray
 
 <br>
 <br>
@@ -77,9 +77,10 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 
 
 
-## Application version as of 2023-04-23
+## Application version as of 2023-04-24
 ![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
-![Screen Shot 2023-04-23 at 3 31 45 PM](https://user-images.githubusercontent.com/94663542/233861016-5922d917-4841-4736-9fd2-8ecaa075e570.png)
+![Screen Shot 2023-04-24 at 6 16 36 PM](https://user-images.githubusercontent.com/94663542/234129236-8a8ce217-9003-4b43-9d76-60d5759354f0.png)
+![Screen Shot 2023-04-24 at 6 16 50 PM](https://user-images.githubusercontent.com/94663542/234129258-8016ee39-465c-499c-ab32-321333050a03.png)
 ![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233866692-ecb9ff3f-6260-4d10-98ff-bf8b2f859428.png)
 
 <br>
