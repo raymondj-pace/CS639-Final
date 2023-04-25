@@ -93,9 +93,8 @@ How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview to put in column format.<br>
 How to make a listview clickable (not easy!).<br>
 How to pass custom Java objects between fragments with using host navigation AND implementing the Parcelable interface and creating bundles.<br>
-How to update a Firebase record by using the key value (have to save the key value in the Java object).
-How to create an opening animation screen.
-<br>
+How to update and delete a Firebase record by using the key value (have to save the key value in the Java object).<br>
+How to create an opening animation screen.<br>
 <br>
 
 ## Things still TODO:
