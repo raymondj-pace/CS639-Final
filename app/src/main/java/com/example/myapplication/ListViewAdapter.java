@@ -14,6 +14,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.Navigation;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -31,8 +34,19 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
     @SuppressWarnings("unused")
     public void remove(int position) {
+
+        // Get the Firebase key
+        MoneyTransaction trans = transactionList.get(position);
+        String key = trans.getKey();
+
+        // Remove from adapter
         transactionList.remove(position);
         notifyDataSetChanged();
+
+        // Delete from Firebase
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("transactions");;
+        myRef.child(key).setValue(null);
     }
 
     @Override
@@ -157,5 +171,4 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         return convertView;
     }
-
 }
