@@ -257,9 +257,12 @@ public class AddFundsFragment extends Fragment {
              */
             else {
                 // Create new transaction
-                MoneyTransaction transaction = new MoneyTransaction(this.transactionType, dateStr, amount, aDescription);
-                DatabaseReference newPostRef  = myRef.push();
-                newPostRef.setValue(transaction);
+                String key = myRef.push().getKey();
+                MoneyTransaction transaction = new MoneyTransaction(key, this.transactionType, dateStr, amount, aDescription);
+                myRef.child(key).setValue(transaction);
+
+                //DatabaseReference newPostRef  = myRef.push();
+                //newPostRef.setValue(transaction);
             }
 
             return true;
