@@ -1,4 +1,5 @@
-# CS639 Mobile Application Development
+# Pace University
+# CS 639 Mobile Application Development
 # May 2023, Final Project
 
 <br>
