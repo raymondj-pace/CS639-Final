@@ -83,8 +83,10 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 ![Screen Shot 2023-04-24 at 6 16 36 PM](https://user-images.githubusercontent.com/94663542/234129236-8a8ce217-9003-4b43-9d76-60d5759354f0.png)
 ![Screen Shot 2023-04-24 at 6 16 50 PM](https://user-images.githubusercontent.com/94663542/234129258-8016ee39-465c-499c-ab32-321333050a03.png)
 ![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233866692-ecb9ff3f-6260-4d10-98ff-bf8b2f859428.png)
-
 <br>
+
+## Application icon:
+![Application Launch Icon](https://user-images.githubusercontent.com/94663542/234710407-480fe430-7cc7-440f-8a02-dd1d865cf891.png)
 <br>
 <br>
 
