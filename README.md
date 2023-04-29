@@ -87,6 +87,7 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 ### 1. Continue working on left swipe delete to fix UI issues: Rene
 ### 2. Continue working on project paper: Ray
 ### 3. Investigate adding test case and code coverage: all
+### 4. Add Google authenication login using Firebase: Rushda
 
 <br>
 <br>
@@ -119,3 +120,4 @@ How to work in a team using github.<br>
 
 ## Things still TODO:
 Allow for line items to be deleted from the list view using a horizontal swipe action across rows.<br>
+Add Google authenication login using Firebase.<br>
