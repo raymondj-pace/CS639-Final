@@ -65,11 +65,28 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 
 # **PROJECT SPRINTS:**
-## Sprint #1: April 22 - April 29
+## Sprint #1: April 22 - April 28
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
 ### 2. Add opening animation screen to the app: Ray
 ### 3. Investige and add passing custom java objects between fragments to all for updating of records: Ray
 ### 4. Literature and survey review and start inital draft for project paper: Ray
+<br>
+
+## Sprint #1 retrospective:
+### 1. Parcelable object type now being passed between fragments.
+### 2. Add update (edit) functionality by clicking row in listview.
+### 3. Added UI delete option.
+### 4. Add intial animation screen.
+### 5. Created new app launcher icon.
+### 6. Project paper started. (continued into sprint#2)
+### 7. Intial version of swipe left delete working. (continued into sprint#2)
+
+<br>
+
+## Sprint #2: April 29 - May 5
+### 1. Continue working on left swipe delete to fix UI issues: Rene
+### 2. Continue working on project paper: Ray
+### 3. Investigate adding test case and code coverage: all
 
 <br>
 <br>
