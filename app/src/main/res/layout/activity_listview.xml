@@ -1,54 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zerobranch.layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    >
+    android:layout_height="35dp"
+    app:draggedItem="@id/drag_item"
+    app:rightItem="@id/right_view"
+    app:swipeDirection="left">
 
-    <TextView
-        android:id="@+id/textViewLV1"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.14"
-        android:layout_width="10px"
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:gravity="left" />
+    <ImageView
+        android:id="@+id/right_view"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ff5722"
+        android:gravity="center"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        android:src="@drawable/ic_delete_foreground"/>
 
-    <TextView
-        android:id="@+id/textViewLV2"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.7"
-        android:layout_width="10px"
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:gravity="center" />
 
-    <TextView
-        android:id="@+id/textViewLV3"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.65"
-        android:layout_width="10px"
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:gravity="right" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/drag_item"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="#eeeeee">
 
-    <TextView
-        android:id="@+id/textViewLV4"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.5"
-        android:layout_width="10px"
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:gravity="left" />
+        <TextView
+            android:id="@+id/textViewLV1"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:layout_width="10px"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:gravity="left" />
 
-    <TextView
-        android:id="@+id/textViewLV5"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.14"
-        android:layout_width="10px"
-        android:padding="6dp"
-        android:textColor="@color/black"
-        android:gravity="center" />
+        <TextView
+            android:id="@+id/textViewLV2"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:layout_width="10px"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:gravity="center" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textViewLV3"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:layout_width="10px"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/textViewLV4"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_width="10px"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:gravity="left" />
+
+        <TextView
+            android:id="@+id/textViewLV5"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14"
+            android:layout_width="10px"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+    </LinearLayout>
+</com.zerobranch.layout.SwipeLayout>
