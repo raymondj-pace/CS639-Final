@@ -85,7 +85,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         TextView textViewLV2 = convertView.findViewById(R.id.textViewLV2);
         TextView textViewLV3 = convertView.findViewById(R.id.textViewLV3);
         TextView textViewLV4 = convertView.findViewById(R.id.textViewLV4);
-        TextView textViewLV5 = convertView.findViewById(R.id.textViewLV5);
 
         textViewLV1.setText("$");
         if (currentItem.getTransactionType() == 0) {
@@ -100,10 +99,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         DecimalFormat df = new DecimalFormat("0.00");
         String a = "$" + df.format(Math.abs(amount));
         textViewLV3.setText(a);
-
         textViewLV4.setText(currentItem.getDescription());
-
-        textViewLV5.setText("X");
 
 
         textViewLV1.setOnClickListener(new View.OnClickListener() {
@@ -166,7 +162,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
             }
         });
 
-        textViewLV5.setOnClickListener(new View.OnClickListener() {
+        /*textViewLV5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(mContext)
@@ -179,7 +175,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
                             }})
                         .setNegativeButton(android.R.string.no, null).show();
             }
-        });
+        });*/
 
         if (rightView != null) {
             rightView.setOnClickListener(new View.OnClickListener() {
