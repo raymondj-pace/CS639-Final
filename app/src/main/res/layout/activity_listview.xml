@@ -67,14 +67,5 @@
             android:textColor="@color/black"
             android:gravity="left" />
 
-        <TextView
-            android:id="@+id/textViewLV5"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.14"
-            android:layout_width="10px"
-            android:padding="6dp"
-            android:textColor="@color/black"
-            android:gravity="center" />
-
     </LinearLayout>
 </com.zerobranch.layout.SwipeLayout>
