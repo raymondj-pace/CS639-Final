@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static androidx.recyclerview.widget.RecyclerView.NO_POSITION;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -8,7 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-
+import com.zerobranch.layout.SwipeLayout;
 public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
     private ArrayList<MoneyTransaction> transactionList;
@@ -58,6 +64,10 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
     public boolean isEnabled(int position) {
         return true;
     }
+    class Holder{
+        TextView dragItem;
+        ImageView rightView;
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -67,7 +77,10 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         }
 
         MoneyTransaction currentItem = getItem(position);
-
+        LinearLayout dragItem = convertView.findViewById(R.id.drag_item);
+        ImageView rightView = convertView.findViewById(R.id.right_view);
+        SwipeLayout swipeLayout = convertView.findViewById(R.id.swipe_layout);
+        //TextView rightTextView = convertView.findViewById(R.id.rig);
         TextView textViewLV1 = convertView.findViewById(R.id.textViewLV1);
         TextView textViewLV2 = convertView.findViewById(R.id.textViewLV2);
         TextView textViewLV3 = convertView.findViewById(R.id.textViewLV3);
@@ -83,7 +96,6 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         }
 
         textViewLV2.setText(currentItem.getDate());
-
         double amount = currentItem.getAmount();
         DecimalFormat df = new DecimalFormat("0.00");
         String a = "$" + df.format(Math.abs(amount));
@@ -166,6 +178,31 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
                                 remove(position);
                             }})
                         .setNegativeButton(android.R.string.no, null).show();
+            }
+        });
+
+        if (rightView != null) {
+            rightView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (position != NO_POSITION) {
+                        remove(position);
+                    }
+                }
+            });
+        }
+
+        swipeLayout.setOnActionsListener(new SwipeLayout.SwipeActionsListener() {
+            @Override
+            public void onOpen(int direction, boolean isContinuous) {
+                if(direction == SwipeLayout.LEFT && isContinuous){
+                    remove(position);
+                }
+            }
+
+            @Override
+            public void onClose() {
+
             }
         });
 
