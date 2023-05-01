@@ -7,3 +7,8 @@
 
 ### Firebase Crashlytics
 ![Firebase-Crashlytics](https://user-images.githubusercontent.com/94663542/235490219-80b85514-4bb8-4465-9718-87a633026136.png)
+
+<br>
+
+### Email Notification of Test Run Completion 
+![EmailNotificaton-of-test-completion](https://user-images.githubusercontent.com/94663542/235513526-14b5d405-d89b-4537-93d3-f43caa636c57.png)
