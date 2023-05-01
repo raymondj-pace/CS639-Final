@@ -9,6 +9,7 @@
 ### Proposal:
 The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
 
+<br>
 
 > 3. List Your Expenses and Track Your Spending
 > Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses
