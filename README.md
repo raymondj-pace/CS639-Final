@@ -81,7 +81,7 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 
 # **PROJECT SPRINTS:**
-## Sprint #1: April 22 - April 28
+## Sprint #1 (April 22 - April 28):
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
 ### 2. Add opening animation screen to the app: Ray
 ### 3. Investige and add passing custom java objects between fragments to all for updating of records: Ray
@@ -99,7 +99,7 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 
 <br>
 
-## Sprint #2: April 29 - May 5
+## Sprint #2 (April 29 - May 5):
 ### 1. Continue working on left swipe delete to fix UI issues: Rene
 ### 2. Continue working on project paper: Ray
 ### 3. Investigate adding test case and code coverage: all
