@@ -132,8 +132,8 @@ How to pass custom Java objects between fragments with using host navigation AND
 How to update and delete a Firebase record by using the key value (have to save the key value in the Java object).<br>
 How to create an opening animation screen.<br>
 How to work in a team using github.<br>
+How to add swipe-left support for delete action<br>
 <br>
 
 ## Things still TODO:
-Allow for line items to be deleted from the list view using a horizontal swipe action across rows.<br>
-Add Google authenication login using Firebase.<br>
+Setup app test cases.
