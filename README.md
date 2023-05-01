@@ -22,6 +22,76 @@ The goal of this project is to create an application that keeps track of money d
 
 <br>
 
+<p>The goal of this app is to help students do exactly what Purdue Global recommends; record all purchases, income earned and track spending and overall budget.<br>
+
+How a user will use the app, or the frequency of using the app, will depend on the student's needs:<br>
+
+Student #1 has problems with running of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
+
+Student #2 wants to be sure that they do not turn into someone
+  like Student #1 and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
+  
+The frequency of app usage is dependent on each user's needs.
+</p>
+
+<br>
+<br>
+<br>
+
+### *Other budgeting apps include:*
+
+<br>
+  
+### Rocket Money:
+  
+![Screen Shot 2023-05-01 at 1 45 42 PM](https://user-images.githubusercontent.com/94663542/235501857-04b075a1-b97c-49b0-a5cd-94ac2cc8dc46.png)
+  
+One of Rocket Money's main selling point is to be able to cancel subscriptions:
+  
+![Screen Shot 2023-05-01 at 1 45 57 PM](https://user-images.githubusercontent.com/94663542/235502287-aea25055-e222-454b-9633-fa9a6b82ad80.png)
+
+<br>
+
+![Cons of Rocket Money](https://user-images.githubusercontent.com/94663542/235508497-02dde8d0-2f7e-474c-a098-7811aec84454.png)
+
+
+<br>
+<br>
+
+### Bill Shark:
+![Screen Shot 2023-05-01 at 2 15 12 PM](https://user-images.githubusercontent.com/94663542/235504596-d973317d-8ccb-45d6-9cad-f7d51ea9be44.png)
+
+<br>
+<br>
+
+  
+### Trim:
+  
+![Trim-app](https://user-images.githubusercontent.com/94663542/235503450-5d47dcad-80e5-4909-920f-0fbc3c26b1c5.png)
+
+<br>
+<br>
+
+## All 3 of these apps have similar features and a comparison of them is as follows:
+
+![Comparison](https://user-images.githubusercontent.com/94663542/235503899-f462db25-e693-46fa-aa33-433d03602880.png)
+
+<br>
+<br>
+
+<p>While all three of these apps have nice features they also come with an expense, sometimes as high as 40% for any money that was saved by canceling or reducing bills. There is a slight predatory feeling with these apps. Users of these apps are looking to save money and the goal of the application developers are to earn meony by encouraging the user to cancel subscriptions and then take upwards of 40% of what the user saved.<br>
+
+The audience of our app is the undergraduate student that is likely living away from home for the first time and has likely never had to perform budgetting before. The undergraduate student typically lives on campus and does not have utility bills that they need to cancel or negotiate away via a third-party.<br>
+
+The primary goal of our app is to give the student a simple and quick view of how much money they currently have. Other apps focus on multiple accounts including investment accounts and ours focuses on how much money they currently have "in their wallet". Our app does not discourage having mutliple accounts. A user could enter a deuction as "$300, moved money to long-term savings account." Now this $300 does show up as available money and if fact is hidden from the uers in that these other accounts are not a reminder of money they have to spend. The opposite is true of the student's credi card accounts. Any purchases made whether by cash or credit card will show as a deduction that needs to eventually be paid. It is too easy to hide debt by having mutliple credit card accounts. Lastly, the desire for our app is that it would be made available for free at the university.</p>
+  
+
+
+
+<br>
+<br>
+<br>
+
 ## Sources for project paper:
 
 [1]&emsp;2022 RCS Fact Sheet #3 Preparing for Retirement in America, 2022 EBRI/Greenwald Research Retirement Confidence Survey.</ul>
@@ -53,6 +123,8 @@ https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluatin
 
 <br>
 
+# **Application Design and Prototype**
+
 ## Application intial rough draft:
 ![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
 
@@ -73,9 +145,31 @@ https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluatin
 
 <p>Transactions can be edited by clicking on the row and the child fragment will be prefilled.
 
-The navigation uses safe-args and passes parcelable bundles by implementing the Parcelable interface. This was a difficult task because if your class is not implementing the Parcelable interface there is no error in Logcat to indicate this. A lot of digging was required to get passing Java objects between fragments working.
-</p>
+The navigation uses safe-args and passes parcelable bundles by implementing the Parcelable interface. This was a difficult task because if your class is not implementing the Parcelable interface there is no error in Logcat to indicate this. A lot of digging was required to get passing Java objects between fragments working.</p>
 
+<br>
+
+### Our prototype uses:
+<br>
+
+![Firebase-logo-white](https://user-images.githubusercontent.com/94663542/235510465-b768dfc8-e2fa-40ab-bd52-ce9425ad516b.png)<br>
+...to save money transactions
+<br>
+<br>
+<br>
+
+![github-white](https://user-images.githubusercontent.com/94663542/235511723-797bf792-3573-4892-a877-9550dcfd6c05.png)<br>
+Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayout
+
+<br>
+<br>
+
+## Application Test Environment:
+https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
+
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -110,12 +204,7 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 
 
-## Application Test Environment:
-https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
 
-<br>
-<br>
-<br>
 
 
 
