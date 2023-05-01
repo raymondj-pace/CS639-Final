@@ -8,34 +8,42 @@
 
 ### Proposal:
 The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
-```
-3. List Your Expenses and Track Your Spending
-Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses
-by looking at past bank statements and credit card statements. Anticipate the costs of tuition, textbooks, school 
-supplies, transportation, and other costs.
-
-Over the next month, record all of your purchases and add these to your budget, adjusting your original estimates as 
-necessary. It can be helpful to organize your expenses into different categories, such as education, food, housing, and 
-entertainment. Separating expenses into needs and wants can help you figure out where you can cut back.
-```
-
-Sources to be used for paper and presentation:
-
-[1] https://www.nasfaa.org/news-item/29609/Financial_Literacy_What_College_Students_Need_to_Know
-
-[2] https://blog.ed.gov/2021/04/financial-literacy-education-and-paying-for-college/
-
-[3] https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/
-
-[4] https://college.harvard.edu/guides/financial-literacy
-
-[5] https://www.financialeducatorscouncil.org/why-is-financial-literacy-important-for-college-students/
-
-[6] https://firstgen.naspa.org/scholarly-article/financial-literacy-of-college-students-focus-on-first-generation-students
-
-[7] Costa Mendes, Filipa, "Financial Literacy of College Students Study Case: Students of the University of Porto", Dissertation of Master in Finance, Sept 2013 
 
 
+> 3. List Your Expenses and Track Your Spending
+> Next, you’ll want to list out all of your expenses over the course of your budget’s time span. You can estimate expenses
+> by looking at past bank statements and credit card statements. Anticipate the costs of tuition, textbooks, school 
+> supplies, transportation, and other costs.
+> 
+> Over the next month, record all of your purchases and add these to your budget, adjusting your original estimates as 
+> necessary. It can be helpful to organize your expenses into different categories, such as education, food, housing, and 
+> entertainment. Separating expenses into needs and wants can help you figure out where you can cut back.
+
+<br>
+
+## Sources for project paper:
+
+[1]&emsp;2022 RCS Fact Sheet #3 Preparing for Retirement in America, 2022 EBRI/Greenwald Research Retirement Confidence Survey.</ul>
+
+[2]&emsp;Brau, James C., et al., Financial Literacy among College Students: An Empirical Analysis, Journal of Financial Education, July 13, 2021.
+
+[3]&emsp;Fay, Bill, Bankruptcy Statistics, (https://www.debt.org/bankruptcy/statistics/), April 13, 2023.
+
+[4]&emsp;National Association of Student Financial Aid Administrators, Financial Literacy: What College Students Need to Know,<br>
+&emsp;&emsp;&emsp;https://www.nasfaa.org/news-item/29609/Financial_Literacy_What_College_Students_Need_to_Know, December 8, 2022.
+
+[5]&emsp;The U.S. Department of Education, Financial Literacy Education and Paying for College, HOMEROOM, The Official Blog of the U.S.<br>
+&emsp;&emsp;&emsp;Department of Education, April 30, 2021.
+
+[6]&emsp;Purdue Global, Budgeting and Financial Literacy for College Students,<br>
+&emsp;&emsp;&emsp;https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/, May 13, 2022.
+
+[7]&emsp;Gomez, E., Zhou, J., & Yu, J., Financial Literacy of College Students: Focus on First-Generation Students. Journal of Business Diversity,<br>
+&emsp;&emsp;&emsp;23(1). 2023, https://doi.org/10.33423/jbd.v23i1.5777
+
+[8]&emsp;Fox, Michelle, Half of Americans with Retirement Accounts Have Taken an Early Withdrawal,<br>
+&emsp;&emsp;&emsp;https://www.cnbc.com/2021/11/22/half-of-americans-with-retirement-accounts-have-taken-early-withdrawals.html,<br>
+&emsp;&emsp;&emsp;November 22, 2021.
 
 <br>
 
@@ -52,7 +60,7 @@ Sources to be used for paper and presentation:
 <br>
 <br>
 
-### Internal Application Structure
+### Internal Application Structure:
 <p>The application uses multi-fragments with navigation. The main fragment uses a custom listview by creating an ArrayAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.
 
 Transactions can be edited by clicking on the row and the child fragment will be prefilled.
