@@ -4,7 +4,7 @@
 
 <br>
 
-## The topic this semester is: Pace Undergraduate Students’ Financial Literacy
+## The topic this semester is: *Pace Undergraduate Students’ Financial Literacy*
 
 ### Proposal:
 The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
