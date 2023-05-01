@@ -44,7 +44,7 @@ Sources to be used for paper and presentation:
 
 <br>
 
-## Appllication prototype done with Figma:
+## Application prototype done with Figma:
 ![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
 
 
@@ -92,11 +92,18 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 <br>
 <br>
+
+
+## Application Test Environment:
+https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
+
+<br>
+<br>
 <br>
 
 
 
-## Application version as of 2023-04-24
+## Application version as of 2023-04-24:
 ![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
 ![Screen Shot 2023-04-24 at 6 16 36 PM](https://user-images.githubusercontent.com/94663542/234129236-8a8ce217-9003-4b43-9d76-60d5759354f0.png)
 ![Screen Shot 2023-04-24 at 6 16 50 PM](https://user-images.githubusercontent.com/94663542/234129258-8016ee39-465c-499c-ab32-321333050a03.png)
