@@ -49,7 +49,7 @@ The goal of this project is to create an application that keeps track of money d
 <br>
 
 ## Project paper:
-*Put link here when done*
+https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluating%20the%20Financial%20Literacy%20Skill%20of%20Undergraduate%20Students.pdf
 
 <br>
 
