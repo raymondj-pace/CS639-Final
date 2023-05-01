@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
+
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -32,11 +33,8 @@ public class MainFragment extends Fragment {
     private long snapShotRowCount = 0;
     private ListView simpleList;
     private ArrayList<MoneyTransaction> transactions;
-
     private ListViewAdapter adapter;
-
     private Context mContext;
-
     private FragmentMainBinding binding;
 
     // Save the context here onAttach - it's not guaranteed to be non-null onViewCreated !!!
@@ -52,7 +50,6 @@ public class MainFragment extends Fragment {
 
         // Inflate the layout for this fragment
         binding = FragmentMainBinding.inflate(inflater, container, false);
-        //view = inflater.inflate(R.layout.fragment_main, container, false);
         View view = binding.getRoot();
 
         simpleList = view.findViewById(R.id.simpleListView);
@@ -95,7 +92,9 @@ public class MainFragment extends Fragment {
                 double currentBalance = 0.00;
                 for (DataSnapshot postSnapshot1 : dataSnapshot.getChildren()) {
                     MoneyTransaction t = postSnapshot1.getValue(MoneyTransaction.class);
+
                     t.setKey(postSnapshot1.getKey());
+
                     transactions.add(t);
                     if (t.getTransactionType() == 0) {
                         currentBalance -= t.getAmount();
@@ -111,11 +110,11 @@ public class MainFragment extends Fragment {
                 DecimalFormat df = new DecimalFormat("0.00");
                 if (currentBalance < 0.0) {
                     balanceFormatted = "-$" + df.format(Math.abs(currentBalance));
-                    tv.setTextColor(Color.parseColor("#FF0000"));  // Red
+                    tv.setTextColor(ContextCompat.getColor(mContext, R.color.warning_red));
                 }
                 else {
                     balanceFormatted = "$" + df.format(currentBalance);
-                    tv.setTextColor(Color.parseColor("#000000"));  // Black
+                    tv.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 }
 
                 // Update the main balance
@@ -128,16 +127,6 @@ public class MainFragment extends Fragment {
                 adapter = new ListViewAdapter(mContext, transactions);
                 simpleList.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
-
-                /*
-                binding.simpleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                        TextView v = view.findViewById(R.id.textViewLV4);
-                        Log.d("click", "clicked");
-                    }
-                });
-                 */
             }
 
             @Override

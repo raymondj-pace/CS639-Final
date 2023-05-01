@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class DeductionFragment extends Fragment {
     // Fragment fields
     private EditText amount;
     private EditText description;
+    @SuppressWarnings("FieldCanBeLocal")
     private CalendarView calendarView;
 
     // Calendar field values
@@ -40,11 +42,13 @@ public class DeductionFragment extends Fragment {
     private String currentDay;
 
     private String transKey = null;
+    @SuppressWarnings("FieldCanBeLocal")
     final private int transactionType = 0;
     private static final String TAG = "DeductFundsFragment";
 
     DatabaseReference myRef;
 
+    @SuppressLint("SimpleDateFormat")
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -71,6 +75,7 @@ public class DeductionFragment extends Fragment {
             Log.d("BUNDLE", String.valueOf(_trans.getAmount()));
 
             String _key = _trans.getKey();
+            @SuppressWarnings("unused")
             int _trans_type = _trans.getTransactionType();
             String _desc = _trans.getDescription();
             String _date = _trans.getDate();
@@ -99,21 +104,17 @@ public class DeductionFragment extends Fragment {
                 calendarView.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(_date).getTime(), true, true);
             } catch (ParseException e) {
                 // Leave as default date
-                //throw new RuntimeException(e);
             }
         }
         else {
-
-            Log.d("BUNDLE", "Bundle is NULL");
-
             this.transKey = null;
 
             /*
              * Set default date in case nothing is selected from CalendarView
              */
-            Date today = new Date(); // Fri Jun 17 14:54:28 PDT 2016
+            Date today = new Date();
             Calendar cal = Calendar.getInstance();
-            cal.setTime(today); // don't forget this if date is arbitrary e.g. 01-01-2014
+            cal.setTime(today);
 
             int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
             int month = cal.get(Calendar.MONTH) + 1;
@@ -159,7 +160,7 @@ public class DeductionFragment extends Fragment {
             // Month is zero based
             month += 1;
 
-            // Put a leading 0 on day and month when needed
+            // Put a leading '0' on day and month when needed
             if (month < 10) {
                 currentMonth = "0" + month;
             }
@@ -238,7 +239,7 @@ public class DeductionFragment extends Fragment {
 
             double amount = Double.parseDouble(aAmount);
 
-            // Get Firebase insert reference
+            // Get Firebase reference
             FirebaseDatabase database = FirebaseDatabase.getInstance();
 
             myRef = database.getReference("transactions");
@@ -259,7 +260,9 @@ public class DeductionFragment extends Fragment {
                 // Create new transaction
                 String key = myRef.push().getKey();
                 MoneyTransaction transaction = new MoneyTransaction(key, this.transactionType, dateStr, amount, aDescription);
-                myRef.child(key).setValue(transaction);
+                if (key != null) {
+                    myRef.child(key).setValue(transaction);
+                }
             }
 
             return true;

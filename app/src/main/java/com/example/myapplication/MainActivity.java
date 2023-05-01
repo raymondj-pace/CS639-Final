@@ -9,16 +9,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
-
-import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
     private static final String TAG = "MyActivity";
 
     @Override
@@ -35,10 +29,9 @@ public class MainActivity extends AppCompatActivity {
         navController.setGraph(R.navigation.nav_graph, getIntent().getExtras());
 
 
-
         /*
          * For Crash analytics - only run once to get dashboard setup
-         * /
+         *
         Button crashButton = new Button(this);
         crashButton.setText("Test Crash");
         crashButton.setOnClickListener(new View.OnClickListener() {

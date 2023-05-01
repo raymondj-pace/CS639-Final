@@ -1,22 +1,23 @@
 <resources>
-    <string name="app_name">$ Planner</string>
+    <string name="app_name">$$$ Planner</string>
     <string name="current_balance">Current Balance:</string>
     <string name="textview">$0.00</string>
     <string name="add_funds">Add Funds</string>
     <string name="deduction">Deduction</string>
     <string name="amount">Amount:</string>
     <string name="date">Date:</string>
-    <string name="ok">OK</string>
+    <string name="my_ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="add_funds2">Add Funds...</string>
+    <string name="add_funds2">Add Funds…</string>
     <string name="description">Description:</string>
-    <string name="deduct_funds">Deduct Funds...</string>
+    <string name="deduct_funds">Deduct Funds…</string>
     <string name="first_fragment_label">Add Funds</string>
     <string name="second_fragment_label">Deduction</string>
     <string name="description_text">Description</string>
     <string name="enter_a_description">Enter a description</string>
     <string name="enter_an_amount">Enter an amount</string>
     <string name="_0_00">0.00</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="animation_string">Student Financial Planner</string>
+    <string name="swipe_left">Swipe Left</string>
+    <string name="animation">$ animation</string>
 </resources>
