@@ -61,15 +61,17 @@ The goal of this project is to create an application that keeps track of money d
 ## Application prototype done with Figma:
 ![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
 
-
 <br>
 <br>
 <br>
 
-### Internal Application Structure:
-<p>The application uses multi-fragments with navigation. The main fragment uses a custom listview by creating an ArrayAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.
+## Internal Application Structure:
+<p>The application uses multi-fragments with navigation. The main fragment uses a custom listview by creating an ArrayAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.</p>
 
-Transactions can be edited by clicking on the row and the child fragment will be prefilled.
+![Screen Shot 2023-05-01 at 1 01 38 PM](https://user-images.githubusercontent.com/94663542/235493227-77d44918-77b9-413e-b092-f5771980b6b5.png)
+
+
+<p>Transactions can be edited by clicking on the row and the child fragment will be prefilled.
 
 The navigation uses safe-args and passes parcelable bundles by implementing the Parcelable interface. This was a difficult task because if your class is not implementing the Parcelable interface there is no error in Logcat to indicate this. A lot of digging was required to get passing Java objects between fragments working.
 </p>
