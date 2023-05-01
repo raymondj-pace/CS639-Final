@@ -2,6 +2,7 @@
 <com.zerobranch.layout.SwipeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
     android:layout_height="35dp"
@@ -14,14 +15,16 @@
         android:layout_width="90dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="#ff5722"
+        android:background="@color/swipe_left_icon"
+        android:contentDescription="@string/swipe_left"
         android:gravity="center"
-        android:paddingEnd="24dp"
         android:paddingStart="24dp"
-        android:src="@drawable/ic_delete_foreground"/>
+        android:paddingEnd="24dp"
+        android:src="@drawable/ic_delete_foreground"
+        tools:ignore="RedundantDescriptionCheck" />
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -29,22 +32,22 @@
         android:foreground="?selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
-        android:background="#eeeeee">
+        android:background="@color/light_red">
 
         <TextView
             android:id="@+id/textViewLV1"
             android:layout_height="wrap_content"
             android:layout_weight="0.14"
-            android:layout_width="10px"
+            android:layout_width="10dp"
             android:padding="6dp"
             android:textColor="@color/black"
-            android:gravity="left" />
+            android:gravity="end" />
 
         <TextView
             android:id="@+id/textViewLV2"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:layout_width="10px"
+            android:layout_width="10dp"
             android:padding="6dp"
             android:textColor="@color/black"
             android:gravity="center" />
@@ -52,20 +55,20 @@
         <TextView
             android:id="@+id/textViewLV3"
             android:layout_height="wrap_content"
+            android:layout_width="10dp"
             android:layout_weight="0.65"
-            android:layout_width="10px"
             android:padding="6dp"
             android:textColor="@color/black"
-            android:gravity="right" />
+            android:gravity="end" />
 
         <TextView
             android:id="@+id/textViewLV4"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
-            android:layout_width="10px"
+            android:layout_width="10dp"
             android:padding="6dp"
             android:textColor="@color/black"
-            android:gravity="left" />
+            android:gravity="start" />
 
     </LinearLayout>
 </com.zerobranch.layout.SwipeLayout>

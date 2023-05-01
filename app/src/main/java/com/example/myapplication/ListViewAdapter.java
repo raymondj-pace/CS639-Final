@@ -3,21 +3,16 @@ package com.example.myapplication;
 import static androidx.recyclerview.widget.RecyclerView.NO_POSITION;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.Navigation;
 
 import com.google.firebase.database.DatabaseReference;
@@ -26,10 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import com.zerobranch.layout.SwipeLayout;
+
 public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
-    private ArrayList<MoneyTransaction> transactionList;
-    private Context mContext;
+    private final ArrayList<MoneyTransaction> transactionList;
+    @SuppressWarnings("unused")
+    private final Context mContext;
 
     public ListViewAdapter(Context context, ArrayList<MoneyTransaction> transactionList) {
         super(context, 0, transactionList);
@@ -51,7 +48,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         // Delete from Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("transactions");;
+        DatabaseReference myRef = database.getReference("transactions");
         myRef.child(key).setValue(null);
     }
 
@@ -64,7 +61,9 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
     public boolean isEnabled(int position) {
         return true;
     }
-    class Holder{
+
+    @SuppressWarnings("unused")
+    class Holder {
         TextView dragItem;
         ImageView rightView;
     }
@@ -77,7 +76,10 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         }
 
         MoneyTransaction currentItem = getItem(position);
+
+        @SuppressWarnings("unused")
         LinearLayout dragItem = convertView.findViewById(R.id.drag_item);
+
         ImageView rightView = convertView.findViewById(R.id.right_view);
         SwipeLayout swipeLayout = convertView.findViewById(R.id.swipe_layout);
         //TextView rightTextView = convertView.findViewById(R.id.rig);
@@ -102,67 +104,56 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         textViewLV4.setText(currentItem.getDescription());
 
 
-        textViewLV1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("item", currentItem);
+        textViewLV1.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("item", currentItem);
 
-                if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
-                }
-                else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
-                }
+            if (currentItem.getTransactionType() == 1) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
+            }
+            else if (currentItem.getTransactionType() == 0) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
             }
         });
 
-        textViewLV2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("item", currentItem);
+        textViewLV2.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("item", currentItem);
 
-                if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
-                }
-                else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
-                }
+            if (currentItem.getTransactionType() == 1) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
+            }
+            else if (currentItem.getTransactionType() == 0) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
             }
         });
 
-        textViewLV3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("item", currentItem);
+        textViewLV3.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("item", currentItem);
 
-                if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
-                }
-                else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
-                }
+            if (currentItem.getTransactionType() == 1) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
+            }
+            else if (currentItem.getTransactionType() == 0) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
             }
         });
 
-        textViewLV4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("item", currentItem);
+        textViewLV4.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("item", currentItem);
 
-                if (currentItem.getTransactionType() == 1) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
-                }
-                else if (currentItem.getTransactionType() == 0) {
-                    Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
-                }
+            if (currentItem.getTransactionType() == 1) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_AddFunds, bundle);
+            }
+            else if (currentItem.getTransactionType() == 0) {
+                Navigation.findNavController(v).navigate(R.id.action_Main_to_Deduction, bundle);
             }
         });
 
-        /*textViewLV5.setOnClickListener(new View.OnClickListener() {
+        /* noinspection
+          textViewLV5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(mContext)
@@ -178,12 +169,9 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         });*/
 
         if (rightView != null) {
-            rightView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (position != NO_POSITION) {
-                        remove(position);
-                    }
+            rightView.setOnClickListener(v -> {
+                if (position != NO_POSITION) {
+                    remove(position);
                 }
             });
         }

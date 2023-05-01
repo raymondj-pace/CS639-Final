@@ -13,4 +13,7 @@
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
     <color name="yellow">#FFBB33</color>
+    <color name="swipe_left_icon">#FF5722</color>
+    <color name="light_red">#EEEEEE</color>
+    <color name="warning_red">#FF0000</color>
 </resources>

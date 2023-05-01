@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:text="@string/deduct_funds"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
         android:text="@string/amount"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/description"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
         android:inputType="textPersonName"
         android:imeOptions="actionDone"
         android:minHeight="48dp"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
@@ -87,7 +87,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:text="@string/date"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,8 @@
         app:layout_constraintEnd_toStartOf="@+id/DeductFunds_BtnCancel"
         app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView2" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarView2"
+        tools:ignore="PrivateResource" />
 
     <Button
         android:id="@+id/DeductFunds_BtnCancel"

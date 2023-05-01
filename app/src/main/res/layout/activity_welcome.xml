@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/white"
     android:paddingHorizontal="25dp"
     android:paddingVertical="25dp"
     tools:context="com.example.myapplication.WelcomeActivity">
@@ -13,11 +13,12 @@
         android:id="@+id/imageView2"
         android:layout_width="400dp"
         android:layout_height="275dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/animation"
         android:paddingHorizontal="50dp"
         android:paddingVertical="50dp"
-        app:srcCompat="@drawable/dollars" />
+        app:srcCompat="@drawable/dollars"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView"
@@ -27,9 +28,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="23dp"
         android:fontFamily="casual"
-        android:text="Student Financial Planner"
+        android:gravity="center"
+        android:text="@string/animation_string"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        tools:ignore="TextSizeCheck" />
 
 </RelativeLayout>
