@@ -1,6 +1,6 @@
 # Pace University
 # CS 639 Mobile Application Development
-# May 2023, Final Project
+# May 2023 Final Project
 
 <br>
 
@@ -148,6 +148,15 @@ https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluatin
 The navigation uses safe-args and passes parcelable bundles by implementing the Parcelable interface. This was a difficult task because if your class is not implementing the Parcelable interface there is no error in Logcat to indicate this. A lot of digging was required to get passing Java objects between fragments working.</p>
 
 <br>
+<br>
+
+## Application Test Environment:
+https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
+
+<br>
+<br>
+<br>
+<br>
 
 ### Our prototype uses:
 <br>
@@ -163,14 +172,6 @@ Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayo
 
 <br>
 <br>
-
-## Application Test Environment:
-https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
-
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 
@@ -184,20 +185,20 @@ https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
 
 ## Sprint #1 retrospective:
 ### 1. Parcelable object type now being passed between fragments.
-### 2. Add update (edit) functionality by clicking row in listview.
+### 2. Added update (edit) functionality by clicking row in listview.
 ### 3. Added UI delete option.
 ### 4. Add intial animation screen.
 ### 5. Created new app launcher icon.
 ### 6. Project paper started. (continued into sprint#2)
-### 7. Intial version of swipe left delete working. (continued into sprint#2)
+### 6. Created red and green $ indictors to start each row
+### 8. Intial version of swipe left delete working. (continued into sprint#2)
 
 <br>
 
 ## Sprint #2 (April 29 - May 5):
 ### 1. Continue working on left swipe delete to fix UI issues: Rene
 ### 2. Continue working on project paper: Ray
-### 3. Investigate adding test case and code coverage: all
-### 4. Add Google authenication login using Firebase: Rushda
+### 3. Investigate adding testing environments and test cases with code coverage: all
 
 <br>
 <br>
