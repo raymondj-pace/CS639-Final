@@ -5,7 +5,7 @@
 
 <br>
 
-### Firebase Crashlytics
+### Firebase Crashlytics (requires a one-time intentional app crash to get started)
 ![Firebase-Crashlytics](https://user-images.githubusercontent.com/94663542/235490219-80b85514-4bb8-4465-9718-87a633026136.png)
 
 <br>
