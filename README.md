@@ -6,7 +6,13 @@
 
 ## The topic this semester is: *Pace Undergraduate Students’ Financial Literacy*
 
-### Proposal:
+<br>
+
+___
+<br>
+
+## **&#8226; Proposal:**
+
 The goal of this project is to create an application that keeps track of money deductions (expenses) and additions. This type of application was listed at [Purdue Global](https://www.purdueglobal.edu/blog/student-life/budgeting-financial-literacy/) (part of Purdue University) as one of the five most important things to aid a student in keeping a budget:
 
 <br>
@@ -36,13 +42,12 @@ The frequency of app usage is dependent on each user's needs.
 
 <br>
 <br>
-<br>
 
-### *Other budgeting apps include:*
+### &#8226; Other budgeting apps include:
 
 <br>
   
-### Rocket Money:
+### **(1) _Rocket Money:_**
   
 ![Screen Shot 2023-05-01 at 1 45 42 PM](https://user-images.githubusercontent.com/94663542/235501857-04b075a1-b97c-49b0-a5cd-94ac2cc8dc46.png)
   
@@ -54,18 +59,16 @@ One of Rocket Money's main selling point is to be able to cancel subscriptions:
 
 ![Cons of Rocket Money](https://user-images.githubusercontent.com/94663542/235508497-02dde8d0-2f7e-474c-a098-7811aec84454.png)
 
-
 <br>
 <br>
 
-### Bill Shark:
+### **(2) _Bill Shark:_**
 ![Screen Shot 2023-05-01 at 2 15 12 PM](https://user-images.githubusercontent.com/94663542/235504596-d973317d-8ccb-45d6-9cad-f7d51ea9be44.png)
 
 <br>
 <br>
 
-  
-### Trim:
+### **(3) _Trim:_**
   
 ![Trim-app](https://user-images.githubusercontent.com/94663542/235503450-5d47dcad-80e5-4909-920f-0fbc3c26b1c5.png)
 
@@ -86,13 +89,16 @@ The audience of our app is the undergraduate student that is likely living away 
 The primary goal of our app is to give the student a simple and quick view of how much money they currently have. Other apps focus on multiple accounts including investment accounts and ours focuses on how much money they currently have "in their wallet". Our app does not discourage having mutliple accounts. A user could enter a deuction as "$300, moved money to long-term savings account." Now this $300 does show up as available money and if fact is hidden from the uers in that these other accounts are not a reminder of money they have to spend. The opposite is true of the student's credi card accounts. Any purchases made whether by cash or credit card will show as a deduction that needs to eventually be paid. It is too easy to hide debt by having mutliple credit card accounts. Lastly, the desire for our app is that it would be made available for free at the university.</p>
   
 
-
-
 <br>
 <br>
 <br>
 
-## Sources for project paper:
+___
+
+<br>
+<br>
+
+## **&#8226; Sources for project paper:**
 
 [1]&emsp;2022 RCS Fact Sheet #3 Preparing for Retirement in America, 2022 EBRI/Greenwald Research Retirement Confidence Survey.</ul>
 
@@ -118,26 +124,36 @@ The primary goal of our app is to give the student a simple and quick view of ho
 
 <br>
 
-## Project paper:
+## **&#8226; Project paper:**
 https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluating%20the%20Financial%20Literacy%20Skill%20of%20Undergraduate%20Students.pdf
 
+<br>
+<br>
+
+___
+___
+___
+
+<br>
 <br>
 
 # **Application Design and Prototype**
 
-## Application intial rough draft:
+<br>
+
+## &#8226; Application intial rough draft:
 ![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
 
 <br>
 
-## Application prototype done with Figma:
+## &#8226; Application prototype done with Figma:
 ![FIGMA-prototype-v1](https://user-images.githubusercontent.com/94663542/232889751-70d7418a-305b-44af-9fb3-aafe278f467e.png)
 
 <br>
 <br>
 <br>
 
-## Internal Application Structure:
+## &#8226; Internal Application Structure:
 <p>The application uses multi-fragments with navigation. The main fragment uses a custom listview by creating an ArrayAdapter subclass so that each line within the listview can have its columns justified similar to an html table. The database uses Firebase to keep track of all transactions. The main fragment view shows the user's current balance. If the balance goes negative the balance will be shown in red.</p>
 
 ![Screen Shot 2023-05-01 at 1 01 38 PM](https://user-images.githubusercontent.com/94663542/235493227-77d44918-77b9-413e-b092-f5771980b6b5.png)
@@ -150,15 +166,19 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 <br>
 
-## Application Test Environment:
+## Opening Animation Activity:
+https://user-images.githubusercontent.com/94663542/235737239-9806161e-d29e-414c-acb2-deb98ae978b8.mp4
+
+<br>
+<br>
+
+## &#8226; Application Test Environment:
 https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
 
 <br>
 <br>
-<br>
-<br>
 
-### Our prototype uses:
+### &#8226; Our application prototype uses:
 <br>
 
 ![Firebase-logo-white](https://user-images.githubusercontent.com/94663542/235510465-b768dfc8-e2fa-40ab-bd52-ce9425ad516b.png)<br>
@@ -175,7 +195,17 @@ Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayo
 <br>
 <br>
 
+___
+___
+___
+
+<br>
+<br>
+<br>
+
 # **PROJECT SPRINTS:**
+<br>
+
 ## Sprint #1 (April 22 - April 28):
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
 ### 2. Add opening animation screen to the app: Ray
@@ -183,7 +213,7 @@ Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayo
 ### 4. Literature and survey review and start inital draft for project paper: Ray
 <br>
 
-## Sprint #1 retrospective:
+## Sprint #1 Retrospective:
 ### 1. Parcelable object type now being passed between fragments.
 ### 2. Added update (edit) functionality by clicking row in listview.
 ### 3. Added UI delete option.
@@ -195,28 +225,51 @@ Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayo
 
 <br>
 
+___
+<br>
+
 ## Sprint #2 (April 29 - May 5):
 ### 1. Continue working on left swipe delete to fix UI issues: Rene
 ### 2. Continue working on project paper: Ray
 ### 3. Investigate adding testing environments and test cases with code coverage: all
+<br>
+
+## Sprint #2 Retrospective:
+### 1. Project paper completed.
+### 2. Intial test envivornment setup.
+
+<br>
+
+___
+<br>
+
+## Sprint #3(May 6 - May 12):
+### 1. Create project presentation: Ray
+### 2. Create YouTube video: Ray
+### 3. Continue with enhancing testing environment: all
+<br>
+
+## &#8226; Sprint #3 Retrospective:
 
 <br>
 <br>
 <br>
 
+___
+___
+___
 
+<br>
+<br>
 
-
-
-
-## Application version as of 2023-04-24:
+## Application as of 2023-04-24:
 ![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
 ![Screen Shot 2023-04-24 at 6 16 36 PM](https://user-images.githubusercontent.com/94663542/234129236-8a8ce217-9003-4b43-9d76-60d5759354f0.png)
 ![Screen Shot 2023-04-24 at 6 16 50 PM](https://user-images.githubusercontent.com/94663542/234129258-8016ee39-465c-499c-ab32-321333050a03.png)
 ![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233866692-ecb9ff3f-6260-4d10-98ff-bf8b2f859428.png)
 <br>
 
-## Application icon:
+## Application launch icon:
 ![Application Launch Icon](https://user-images.githubusercontent.com/94663542/234710407-480fe430-7cc7-440f-8a02-dd1d865cf891.png)
 <br>
 <br>
@@ -225,7 +278,7 @@ Public domain Android swipe-left module: https://github.com/zerobranch/SwipeLayo
 How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview to put in column format.<br>
 How to make a listview clickable (not easy!).<br>
-How to pass custom Java objects between fragments with using host navigation AND implementing the Parcelable interface and creating bundles.<br>
+How to pass custom Java objects between fragments while using host navigation AND implementing the Parcelable interface and creating bundles.<br>
 How to update and delete a Firebase record by using the key value (have to save the key value in the Java object).<br>
 How to create an opening animation screen.<br>
 How to work in a team using github.<br>
@@ -233,4 +286,5 @@ How to add swipe-left support for delete action.<br>
 <br>
 
 ## Things still *TODO*:
-Setup app test cases.
+Setup application test cases.<br>
+UI enhancements including categorizing types of transactions.<br>
