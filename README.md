@@ -35,7 +35,7 @@ How a user will use the app, or the frequency of using the app, will depend on t
 Student #1 has problems with running of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
 
 Student #2 wants to be sure that they do not turn into someone
-  like Student #1 and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
+  like Student #1, and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase, but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
   
 The frequency of app usage is dependent on each user's needs.
 </p>
@@ -86,7 +86,7 @@ One of Rocket Money's main selling point is to be able to cancel subscriptions:
 
 The audience of our app is the undergraduate student that is likely living away from home for the first time and has likely never had to perform budgeting before. The undergraduate student typically lives on campus and does not have utility bills that they need to cancel or negotiate away via a third-party.<br>
 
-The primary goal of our app is to give the student a simple and quick view of how much money they currently have. Other apps focus on multiple accounts including investment accounts and ours focuses on how much money they currently have "in their wallet". Our app does not discourage having multiple accounts. A user could enter a deuction as "$300, moved money to long-term savings account." Now this $300 does show up as available money and if fact is hidden from the users in that these other accounts are not a reminder of money they have to spend. The opposite is true of the student's credit card accounts. Any purchases made whether by cash or credit card will show as a deduction that needs to eventually be paid. It is too easy to hide debt by having multiple credit card accounts. Lastly, the desire for our app is that it would be made available for free at the university.</p>
+The primary goal of our app is to give the student a simple and quick view of how much money they currently have. Other apps focus on multiple accounts including investment accounts and ours focuses on how much money they currently have "in their wallet". Our app does not discourage having multiple accounts. A user could enter a deduction as "$300, moved money to long-term savings account." Now this $300 does show up as available money and in fact is hidden from the users in that these other accounts are not a reminder of money that they have available to spend. The opposite is true of the student's credit card accounts. Any purchases made whether by cash or credit card will show as a deduction that needs to eventually be paid. It is too easy to hide debt by having multiple credit card accounts. Lastly, the desire for our app is that it would be made available for free at the university.</p>
   
 
 <br>
@@ -140,7 +140,7 @@ ___
 
 <br>
 
-## &#8226; Application intial rough draft:
+## &#8226; Application initial rough draft:
 ![CS639-RoughDraft](https://user-images.githubusercontent.com/94663542/232889561-7593f186-8f36-4eeb-b7f7-a465c3a3b712.jpg)
 
 <br>
@@ -181,7 +181,7 @@ https://github.com/raymondj-pace/CS639-Final/tree/main/TEST%20IMAGES
 <br>
 
 ![Firebase-logo-white](https://user-images.githubusercontent.com/94663542/235510465-b768dfc8-e2fa-40ab-bd52-ce9425ad516b.png)<br>
-...to save money transactions
+...to save money transactions.
 <br>
 <br>
 <br>
@@ -209,18 +209,18 @@ ___
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
 ### 2. Add opening animation screen to the app: Ray
 ### 3. Investige and add passing custom java objects between fragments to all for updating of records: Ray
-### 4. Literature and survey review and start inital draft for project paper: Ray
+### 4. Literature and survey review and start initial draft for project paper: Ray
 <br>
 
 ## Sprint #1 Retrospective:
 ### 1. Parcelable object type now being passed between fragments.
 ### 2. Added update (edit) functionality by clicking row in listview.
 ### 3. Added UI delete option.
-### 4. Add intial animation screen.
+### 4. Add initial animation screen.
 ### 5. Created new app launcher icon.
-### 6. Project paper started. (continued into sprint#2)
-### 6. Created red and green $ indictors to start each row
-### 8. Intial version of swipe left delete working. (continued into sprint#2)
+### 6. Project paper started. (Continued into sprint#2)
+### 6. Created red and green $ indictors to start each row.
+### 8. Initial version of swipe left deletes working. (Continued into sprint#2)
 
 <br>
 
@@ -235,7 +235,7 @@ ___
 
 ## Sprint #2 Retrospective:
 ### 1. Project paper completed.
-### 2. Intial test envivornment setup.
+### 2. Initial test environment setup.
 
 <br>
 
@@ -282,9 +282,9 @@ How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview to put in column format.<br>
 How to make a listview clickable (not easy).<br>
 How to pass custom Java objects between fragments while using host navigation AND implementing the Parcelable interface and creating bundles.<br>
-How to update and delete a Firebase record by using the key value (have to save the key value in the Java object).<br>
+How to update and delete a Firebase record by using the key value (must save the key value in the Java object).<br>
 How to create an opening animation screen.<br>
-How to work in a team using github.<br>
+How to work in a team using GitHub.<br>
 How to add swipe-left support for delete action.<br>
 <br>
 
