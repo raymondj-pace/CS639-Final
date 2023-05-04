@@ -124,8 +124,7 @@ ___
 
 <br>
 
-## **&#8226; Project paper:**
-https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluating%20the%20Financial%20Literacy%20Skill%20of%20Undergraduate%20Students.pdf
+## &#8226; [Project paper click here](https://github.com/raymondj-pace/CS639-Final/blob/main/PROJECT%20PAPER/Evaluating%20the%20Financial%20Literacy%20Skill%20of%20Undergraduate%20Students.pdf)
 
 <br>
 <br>
