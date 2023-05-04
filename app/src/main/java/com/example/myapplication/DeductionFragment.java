@@ -28,6 +28,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
+
 public class DeductionFragment extends Fragment {
 
     // Fragment fields
@@ -91,13 +92,23 @@ public class DeductionFragment extends Fragment {
             int month = l_date.getMonthValue();
             int year = l_date.getYear();
             int day = l_date.getDayOfMonth();
-            this.currentDay = String.valueOf(day);
+
+            // Pad day with leading 0 if needed
+            if (day < 10) {
+                this.currentDay = "0" + day;
+            }
+            else {
+                this.currentDay = String.valueOf(day);
+            }
+
+            // Pad month with leading 0 if needed
             if (month < 10) {
-                currentMonth = "0" + month;
+                this.currentMonth = "0" + month;
             }
             else {
                 this.currentMonth = String.valueOf(month);
             }
+
             this.currentYear = String.valueOf(year);
 
             try {
