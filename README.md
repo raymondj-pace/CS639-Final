@@ -274,10 +274,14 @@ ___
 <br>
 <br>
 
-## Interesting things learned so far:
+# [Project Slide Presentation (Google Slides)](https://docs.google.com/presentation/d/1Wid7jiVnLhdlfDoeCalQavV8P3hGowyPyM39h8bEwcg/edit?usp=sharing)
+
+<br>
+
+## Interesting things learned:
 How to put a border around a TextView by creating a drawable.<br>
 How to modify the format of a listview to put in column format.<br>
-How to make a listview clickable (not easy!).<br>
+How to make a listview clickable (not easy).<br>
 How to pass custom Java objects between fragments while using host navigation AND implementing the Parcelable interface and creating bundles.<br>
 How to update and delete a Firebase record by using the key value (have to save the key value in the Java object).<br>
 How to create an opening animation screen.<br>
