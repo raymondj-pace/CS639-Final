@@ -169,6 +169,12 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 https://user-images.githubusercontent.com/94663542/235737239-9806161e-d29e-414c-acb2-deb98ae978b8.mp4
 
 <br>
+
+## Swipe Left for Delete:
+https://user-images.githubusercontent.com/94663542/236225660-a4757be2-12a6-46c4-ad50-3ca6912d0162.mp4
+
+
+<br>
 <br>
 
 ## &#8226; Application Test Environment:
@@ -261,11 +267,16 @@ ___
 <br>
 <br>
 
-## Application as of 2023-04-24:
+## Application as of 2023-05-06:
 ![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
-![Screen Shot 2023-04-24 at 6 16 36 PM](https://user-images.githubusercontent.com/94663542/234129236-8a8ce217-9003-4b43-9d76-60d5759354f0.png)
-![Screen Shot 2023-04-24 at 6 16 50 PM](https://user-images.githubusercontent.com/94663542/234129258-8016ee39-465c-499c-ab32-321333050a03.png)
-![Screen Shot 2023-04-23 at 3 32 01 PM](https://user-images.githubusercontent.com/94663542/233866692-ecb9ff3f-6260-4d10-98ff-bf8b2f859428.png)
+![Screen Shot 2023-05-04 at 9 31 03 AM](https://user-images.githubusercontent.com/94663542/236229027-29402017-0f6b-4088-8517-c375a1ec6973.png)
+![Screen Shot 2023-05-04 at 9 31 48 AM](https://user-images.githubusercontent.com/94663542/236229274-538942d3-5c92-4773-acc0-b39e850fca91.png)
+![Screen Shot 2023-05-04 at 9 37 59 AM](https://user-images.githubusercontent.com/94663542/236229391-8028d38f-50f4-4e83-934a-96337422b907.png)
+![Screen Shot 2023-05-04 at 9 38 38 AM](https://user-images.githubusercontent.com/94663542/236228638-80a0fecb-b55b-4aae-937d-05dddbce9362.png)
+
+
+
+
 <br>
 
 ## Application launch icon:
