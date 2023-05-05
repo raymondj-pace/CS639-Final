@@ -53,6 +53,10 @@ public class MainFragment extends Fragment {
         View view = binding.getRoot();
 
         simpleList = view.findViewById(R.id.simpleListView);
+
+        simpleList.addHeaderView(new View(this.mContext), null, true);
+        simpleList.addFooterView(new View(this.mContext), null, true);
+
         transactions = new ArrayList<>();
 
         return view;

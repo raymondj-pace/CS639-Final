@@ -16,4 +16,6 @@
     <color name="swipe_left_icon">#FF5722</color>
     <color name="light_red">#EEEEEE</color>
     <color name="warning_red">#FF0000</color>
+    <color name="dollar_green">#2DB83D</color>
+    <color name="dollar_red">#EE4B2B</color>
 </resources>
