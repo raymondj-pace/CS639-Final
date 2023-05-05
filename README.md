@@ -37,7 +37,7 @@ How a user will use the app, or the frequency of using the app, will depend on t
 
 _**Student #1:**_ has problems with running out of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
 
-_**Student #2:**_ wants to be sure that they do not turn into someone like Student #1 and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
+_**Student #2:**_ wants to be sure that they do not turn into someone like Student #1, and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase, but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
   
 The frequency of app usage is dependent on each user's needs.
 </p>
@@ -213,14 +213,14 @@ ___
 # **PROJECT SPRINTS:**
 <br>
 
-## Sprint #1 (April 22 - April 28):
+## &#8226; Sprint #1 (April 22 - April 28):
 ### 1. Investigate and add horizontal left swipe to delete records: Rene and Rushda
 ### 2. Add opening animation screen to the app: Ray
-### 3. Investige and add passing custom java objects between fragments to all for updating of records: Ray
+### 3. Investigate and add passing custom java objects between fragments to all for updating of records: Ray
 ### 4. Literature and survey review and start initial draft for project paper: Ray
 <br>
 
-## Sprint #1 Retrospective:
+## &#8226; Sprint #1 Retrospective:
 ### 1. Parcelable object type now being passed between fragments.
 ### 2. Added update (edit) functionality by clicking row in listview.
 ### 3. Added UI delete option.
@@ -235,25 +235,25 @@ ___
 ___
 <br>
 
-## Sprint #2 (April 29 - May 5):
+## &#8226; Sprint #2 (April 29 - May 5):
 ### 1. Continue working on left swipe delete to fix UI issues: Rene
 ### 2. Continue working on project paper: Ray
 ### 3. Investigate adding testing environments and test cases with code coverage: all
 <br>
 
-## Sprint #2 Retrospective:
+## &#8226; Sprint #2 Retrospective:
 ### 1. Project paper completed.
 ### 2. Initial test environment setup.
-### 3. Project presenation completed. (Google Slides) (not planned)
+### 3. Project presentation completed. (Google Slides) (not planned)
 ### 4. YouTube video completed and uploaded. (not planned)
 ### 5. Fixed bug with Calendar view on editing a record. (not planned)
-### 6. Updated all App images and APK in github.
+### 6. Updated all App images and APK in GitHub.
 <br>
 
 ___
 <br>
 
-## Sprint #3(May 6 - May 12):
+## &#8226; Sprint #3(May 6 - May 12):
 ### 1. Continue with enhancing testing environment and Android test cases: all
 <br>
 
