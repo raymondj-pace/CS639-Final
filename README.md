@@ -168,12 +168,12 @@ The navigation uses safe-args and passes parcelable bundles by implementing the 
 <br>
 
 ## Opening Animation Activity:
-https://user-images.githubusercontent.com/94663542/235737239-9806161e-d29e-414c-acb2-deb98ae978b8.mp4
+https://user-images.githubusercontent.com/94663542/236574976-3844b0fd-631f-449f-b205-dc78963c6687.mp4
 
 <br>
 
 ## Swipe Left for Delete:
-https://user-images.githubusercontent.com/94663542/236225660-a4757be2-12a6-46c4-ad50-3ca6912d0162.mp4
+https://user-images.githubusercontent.com/94663542/236574673-f3aaca23-df32-4035-9554-39e47f3308c6.mp4
 
 
 <br>
@@ -247,6 +247,7 @@ ___
 ### 3. Project presentation completed. (Google Slides) (not planned)
 ### 4. YouTube video completed and uploaded. (not planned)
 ### 5. Fixed bug with Calendar view on editing a record. (not planned)
+### 6. Improved UI with borders, padding, colors and updated opening animation activity. (not planned)
 ### 6. Updated all App images and APK in GitHub.
 <br>
 
@@ -272,14 +273,12 @@ ___
 <br>
 
 ## Application as of 2023-05-06:
-![Screen Shot 2023-04-23 at 5 13 16 PM](https://user-images.githubusercontent.com/94663542/233866658-e454c3c2-d55b-48bc-bcf1-1cb418ad021d.png)
-![Screen Shot 2023-05-04 at 9 31 03 AM](https://user-images.githubusercontent.com/94663542/236229027-29402017-0f6b-4088-8517-c375a1ec6973.png)
-![Screen Shot 2023-05-04 at 9 31 48 AM](https://user-images.githubusercontent.com/94663542/236229274-538942d3-5c92-4773-acc0-b39e850fca91.png)
-![Screen Shot 2023-05-04 at 9 37 59 AM](https://user-images.githubusercontent.com/94663542/236229391-8028d38f-50f4-4e83-934a-96337422b907.png)
-![Screen Shot 2023-05-04 at 9 38 38 AM](https://user-images.githubusercontent.com/94663542/236228638-80a0fecb-b55b-4aae-937d-05dddbce9362.png)
-
-
-
+![OpeningAnimation](https://user-images.githubusercontent.com/94663542/236573665-f6e62f46-339d-4588-a82a-13cddad586c7.png)
+![MainFragment](https://user-images.githubusercontent.com/94663542/236573677-1233f476-c38c-4a99-bb22-f5db2bfeb3f5.png)
+![MainFragment2](https://user-images.githubusercontent.com/94663542/236573690-b33e2eb5-353f-4f3f-89e7-c69c00968cf2.png)
+![ChildFragment](https://user-images.githubusercontent.com/94663542/236573698-8d2d3d30-0688-4d27-ace1-d3b2df7fd61d.png)
+![MainFragment3](https://user-images.githubusercontent.com/94663542/236573703-af34e6e3-f09c-4400-a316-79ca280a2466.png)
+![SwipeLeft](https://user-images.githubusercontent.com/94663542/236573709-1bbb6f8b-5321-4c72-9185-040b949462f3.png)
 
 <br>
 
