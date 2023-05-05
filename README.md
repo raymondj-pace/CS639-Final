@@ -32,10 +32,12 @@ The goal of this project is to create an application that keeps track of money d
 
 How a user will use the app, or the frequency of using the app, will depend on the student's needs:<br>
 
-Student #1 has problems with running of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
 
-Student #2 wants to be sure that they do not turn into someone
-  like Student #1, and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase, but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
+## Application Personas:
+
+_**Student #1:**_ has problems with running out of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
+
+_**Student #2:**_ wants to be sure that they do not turn into someone like Student #1 and they use the app less frequently depending on expenses. For example, Student #1 would likely need to enter every food purchase but Student #2 could enter one entry for "Food Expenses" at the end of the week.<br>
   
 The frequency of app usage is dependent on each user's needs.
 </p>
