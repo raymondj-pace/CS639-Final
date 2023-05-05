@@ -33,7 +33,7 @@ The goal of this project is to create an application that keeps track of money d
 How a user will use the app, or the frequency of using the app, will depend on the student's needs:<br>
 
 
-## Application Personas:
+### Application Personas:
 
 _**Student #1:**_ has problems with running out of money, bouncing checks and not being able to pay credit card minimum payments. Student #1 should focus on using the app at least daily if not for every deduction or addition of funds so that they have an up-to-date status.<br>
 
