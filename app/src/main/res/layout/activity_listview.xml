@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipe_layout"
     android:layout_width="match_parent"
-    android:layout_height="35dp"
+    android:layout_height="50dp"
     app:draggedItem="@id/drag_item"
     app:rightItem="@id/right_view"
     app:swipeDirection="left">
@@ -18,57 +18,86 @@
         android:background="@color/swipe_left_icon"
         android:contentDescription="@string/swipe_left"
         android:gravity="center"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:src="@drawable/ic_delete_foreground"
         tools:ignore="RedundantDescriptionCheck" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/drag_item"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@color/light_red">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:id="@+id/drag_item"
-        android:foreground="?selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@color/light_red">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/drag_item2"
+                android:gravity="center_vertical"
+                android:background="@color/white">
 
-        <TextView
-            android:id="@+id/textViewLV1"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.14"
-            android:layout_width="10dp"
-            android:padding="6dp"
-            android:textColor="@color/black"
-            android:gravity="end" />
+                <TextView
+                    android:id="@+id/textViewLV1"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.13"
+                    android:gravity="end"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textViewLV2"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.7"
-            android:layout_width="10dp"
-            android:padding="6dp"
-            android:textColor="@color/black"
-            android:gravity="center" />
+                <TextView
+                    android:id="@+id/textViewLV2"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:layout_width="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="left" />
 
-        <TextView
-            android:id="@+id/textViewLV3"
-            android:layout_height="wrap_content"
-            android:layout_width="10dp"
-            android:layout_weight="0.65"
-            android:padding="6dp"
-            android:textColor="@color/black"
-            android:gravity="end" />
+                <TextView
+                    android:id="@+id/textViewLV3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:layout_weight="0.59"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="end" />
 
-        <TextView
-            android:id="@+id/textViewLV4"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:layout_width="10dp"
-            android:padding="6dp"
-            android:textColor="@color/black"
-            android:gravity="start" />
+                <TextView
+                    android:id="@+id/textViewLV4"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:layout_width="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight ="0dp"
+                    android:textColor="@color/black"
+                    android:gravity="start" />
 
-    </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewLV2ndRow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="end"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
 </com.zerobranch.layout.SwipeLayout>

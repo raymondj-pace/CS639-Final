@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.navigation.Navigation;
 
 import com.google.firebase.database.DatabaseReference;
@@ -82,18 +83,18 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
 
         ImageView rightView = convertView.findViewById(R.id.right_view);
         SwipeLayout swipeLayout = convertView.findViewById(R.id.swipe_layout);
-        //TextView rightTextView = convertView.findViewById(R.id.rig);
         TextView textViewLV1 = convertView.findViewById(R.id.textViewLV1);
         TextView textViewLV2 = convertView.findViewById(R.id.textViewLV2);
         TextView textViewLV3 = convertView.findViewById(R.id.textViewLV3);
         TextView textViewLV4 = convertView.findViewById(R.id.textViewLV4);
+        TextView textViewLV2ndRow = convertView.findViewById(R.id.textViewLV2ndRow);
 
         textViewLV1.setText("$");
         if (currentItem.getTransactionType() == 0) {
-            textViewLV1.setTextColor(Color.parseColor("#FFEE4B2B"));
+            textViewLV1.setTextColor(ContextCompat.getColor(mContext, R.color.warning_red));
         }
         else {
-            textViewLV1.setTextColor(Color.parseColor("#FF2DB83D"));
+            textViewLV1.setTextColor(ContextCompat.getColor(mContext, R.color.dollar_green));
         }
 
         textViewLV2.setText(currentItem.getDate());
@@ -102,6 +103,7 @@ public class ListViewAdapter extends ArrayAdapter<MoneyTransaction> {
         String a = "$" + df.format(Math.abs(amount));
         textViewLV3.setText(a);
         textViewLV4.setText(currentItem.getDescription());
+        textViewLV2ndRow.setText(currentItem.getDescription());
 
 
         textViewLV1.setOnClickListener(v -> {
