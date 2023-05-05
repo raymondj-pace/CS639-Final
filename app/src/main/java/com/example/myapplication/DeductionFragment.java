@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -160,6 +162,24 @@ public class DeductionFragment extends Fragment {
                 return true;
             }
             return false;
+        });
+
+
+        /*
+         * Add text watcher the amount EditText to limit number of digits beyond decimal point to 2
+         */
+        amount.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+                String text = arg0.toString();
+                if (text.contains(".") && text.substring(text.indexOf(".") + 1).length() > 2) {
+                    amount.setText(text.substring(0, text.length() - 1));
+                    amount.setSelection(amount.getText().length());
+                }
+            }
+
+            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) { }
+
+            public void afterTextChanged(Editable arg0) { }
         });
 
 
