@@ -34,4 +34,19 @@
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/paceuniversity_logo"
+        android:contentDescription="@string/pace_university_logo" />
+
 </RelativeLayout>
