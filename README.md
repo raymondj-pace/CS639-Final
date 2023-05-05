@@ -242,19 +242,21 @@ ___
 ## Sprint #2 Retrospective:
 ### 1. Project paper completed.
 ### 2. Initial test environment setup.
-
+### 3. Project presenation complete (Google Slides). (not planned)
+### 4. YouTube video completed and uploaded. (not planned)
+### 5. Fixed bug with Calendar view on editing a record. (not planned)
+### 6. Updated all App images and APK in github.
 <br>
 
 ___
 <br>
 
 ## Sprint #3(May 6 - May 12):
-### 1. Create project presentation: Ray
-### 2. Create YouTube video: Ray
-### 3. Continue with enhancing testing environment: all
+### 1. Continue with enhancing testing environment and Android test cases: all
 <br>
 
 ## &#8226; Sprint #3 Retrospective:
+
 
 <br>
 <br>
