@@ -242,7 +242,7 @@ ___
 ## Sprint #2 Retrospective:
 ### 1. Project paper completed.
 ### 2. Initial test environment setup.
-### 3. Project presenation complete (Google Slides). (not planned)
+### 3. Project presenation completed. (Google Slides) (not planned)
 ### 4. YouTube video completed and uploaded. (not planned)
 ### 5. Fixed bug with Calendar view on editing a record. (not planned)
 ### 6. Updated all App images and APK in github.
