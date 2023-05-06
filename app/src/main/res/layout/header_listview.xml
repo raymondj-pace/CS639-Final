@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swipe_layout"
+<com.zerobranch.layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="match_parent"
+    >
     <LinearLayout
         android:id="@+id/bottom_wrapper"
         android:layout_width="80dp"
@@ -40,4 +40,4 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-</com.daimajia.swipe.SwipeLayout>
+</com.zerobranch.layout.SwipeLayout>
