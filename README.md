@@ -274,11 +274,11 @@ ___
 
 ## Application as of 2023-05-06:
 ![OpeningAnimation](https://user-images.githubusercontent.com/94663542/236573665-f6e62f46-339d-4588-a82a-13cddad586c7.png)
-![MainFragment](https://user-images.githubusercontent.com/94663542/236573677-1233f476-c38c-4a99-bb22-f5db2bfeb3f5.png)
-![MainFragment2](https://user-images.githubusercontent.com/94663542/236573690-b33e2eb5-353f-4f3f-89e7-c69c00968cf2.png)
-![ChildFragment](https://user-images.githubusercontent.com/94663542/236573698-8d2d3d30-0688-4d27-ace1-d3b2df7fd61d.png)
-![MainFragment3](https://user-images.githubusercontent.com/94663542/236573703-af34e6e3-f09c-4400-a316-79ca280a2466.png)
-![SwipeLeft](https://user-images.githubusercontent.com/94663542/236573709-1bbb6f8b-5321-4c72-9185-040b949462f3.png)
+![MainFragment1-offwhite](https://user-images.githubusercontent.com/94663542/236687577-5db27c68-88bb-493e-8a59-fe4c7184ec4b.png)
+![MainFragment2-offwhite](https://user-images.githubusercontent.com/94663542/236687584-ab336c77-1d54-4b8e-901f-9ef86adb9d13.png)
+![ChildFragment-offwhite](https://user-images.githubusercontent.com/94663542/236687588-406e4856-950e-4d27-8470-ddfdd8d476f1.png)
+![MainFragment3-offwhilte](https://user-images.githubusercontent.com/94663542/236687590-0708238b-4666-43bd-81fa-7e2ffb5e1fa4.png)
+![Swipe-Left2](https://user-images.githubusercontent.com/94663542/236687604-d4ae7d14-ea6c-4658-8c05-3dff5757064e.png)
 
 <br>
 
