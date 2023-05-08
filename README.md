@@ -259,6 +259,9 @@ ___
 <br>
 
 ## &#8226; Sprint #3 Retrospective:
+### 1. Edit YouTube video to splice in Rene's photo at the beginning of video and other small edits.
+### 2. Adjust video from souce "Final Cut Pro" to YouTube to support all formats: SD, HD and 4K, video now looks very good on Chrome browser.
+### 3. Update project README.md to fix formatting, spelling, new images, latest APK build.
 
 
 <br>
