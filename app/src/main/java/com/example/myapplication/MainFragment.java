@@ -37,6 +37,11 @@ public class MainFragment extends Fragment {
     private Context mContext;
     private FragmentMainBinding binding;
 
+    public static boolean isEqual(double d0, double d1) {
+        final double epsilon = 0.0000001;
+        return d0 == d1 ? true : Math.abs(d0 - d1) < epsilon;
+    }
+
     // Save the context here onAttach - it's not guaranteed to be non-null onViewCreated !!!
     @Override
     public void onAttach(@NonNull Context context) {
@@ -112,13 +117,21 @@ public class MainFragment extends Fragment {
 
                 String balanceFormatted;
                 DecimalFormat df = new DecimalFormat("0.00");
-                if (currentBalance < 0.0) {
-                    balanceFormatted = "-$" + df.format(Math.abs(currentBalance));
-                    tv.setTextColor(ContextCompat.getColor(mContext, R.color.warning_red));
+
+                Log.d("CURRENT BALANCE", String.valueOf(currentBalance));
+
+                if (isEqual(currentBalance, 0.00)) {
+                    Log.d("ISEQUAL", "TRUE");
+                    balanceFormatted = "$" + df.format(0.00);
+                    tv.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 }
-                else {
+                else if (currentBalance > 0.00) {
                     balanceFormatted = "$" + df.format(currentBalance);
                     tv.setTextColor(ContextCompat.getColor(mContext, R.color.black));
+                }
+                else {
+                    balanceFormatted = "-$" + df.format(Math.abs(currentBalance));
+                    tv.setTextColor(ContextCompat.getColor(mContext, R.color.warning_red));
                 }
 
                 // Update the main balance
