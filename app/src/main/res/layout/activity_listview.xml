@@ -31,7 +31,7 @@
             android:foreground="?selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
-            android:background="@color/light_red">
+            android:background="@color/off_white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:orientation="horizontal"
                 android:id="@+id/drag_item2"
                 android:gravity="center_vertical"
-                android:background="@color/white">
+                android:background="@color/off_white">
 
                 <TextView
                     android:id="@+id/textViewLV1"
